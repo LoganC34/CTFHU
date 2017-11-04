@@ -13,6 +13,17 @@
 		0205246D1FAD853000200249 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0205246B1FAD853000200249 /* Main.storyboard */; };
 		0205246F1FAD853000200249 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0205246E1FAD853000200249 /* Assets.xcassets */; };
 		020524721FAD853000200249 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 020524701FAD853000200249 /* LaunchScreen.storyboard */; };
+		0250013D1FAD90C30036D650 /* TestFlagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0250013C1FAD90C30036D650 /* TestFlagViewController.swift */; };
+		027594B61FADA104007B6F34 /* FloatingPoint+Radians.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027594AC1FADA103007B6F34 /* FloatingPoint+Radians.swift */; };
+		027594B71FADA104007B6F34 /* SCNVector3+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027594AD1FADA103007B6F34 /* SCNVector3+Extensions.swift */; };
+		027594B81FADA104007B6F34 /* CGPoint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027594AE1FADA103007B6F34 /* CGPoint+Extensions.swift */; };
+		027594B91FADA104007B6F34 /* SceneLocationEstimate+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027594AF1FADA104007B6F34 /* SceneLocationEstimate+Extensions.swift */; };
+		027594BA1FADA104007B6F34 /* LocationNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027594B01FADA104007B6F34 /* LocationNode.swift */; };
+		027594BB1FADA104007B6F34 /* CLLocation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027594B11FADA104007B6F34 /* CLLocation+Extensions.swift */; };
+		027594BC1FADA104007B6F34 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027594B21FADA104007B6F34 /* LocationManager.swift */; };
+		027594BD1FADA104007B6F34 /* SceneLocationEstimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027594B31FADA104007B6F34 /* SceneLocationEstimate.swift */; };
+		027594BE1FADA104007B6F34 /* SCNNode+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027594B41FADA104007B6F34 /* SCNNode+Extensions.swift */; };
+		027594BF1FADA104007B6F34 /* SceneLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027594B51FADA104007B6F34 /* SceneLocationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +35,17 @@
 		0205246E1FAD853000200249 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		020524711FAD853000200249 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		020524731FAD853000200249 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0250013C1FAD90C30036D650 /* TestFlagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFlagViewController.swift; sourceTree = "<group>"; };
+		027594AC1FADA103007B6F34 /* FloatingPoint+Radians.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FloatingPoint+Radians.swift"; sourceTree = "<group>"; };
+		027594AD1FADA103007B6F34 /* SCNVector3+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SCNVector3+Extensions.swift"; sourceTree = "<group>"; };
+		027594AE1FADA103007B6F34 /* CGPoint+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extensions.swift"; sourceTree = "<group>"; };
+		027594AF1FADA104007B6F34 /* SceneLocationEstimate+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SceneLocationEstimate+Extensions.swift"; sourceTree = "<group>"; };
+		027594B01FADA104007B6F34 /* LocationNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationNode.swift; sourceTree = "<group>"; };
+		027594B11FADA104007B6F34 /* CLLocation+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLLocation+Extensions.swift"; sourceTree = "<group>"; };
+		027594B21FADA104007B6F34 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		027594B31FADA104007B6F34 /* SceneLocationEstimate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneLocationEstimate.swift; sourceTree = "<group>"; };
+		027594B41FADA104007B6F34 /* SCNNode+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SCNNode+Extensions.swift"; sourceTree = "<group>"; };
+		027594B51FADA104007B6F34 /* SceneLocationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneLocationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +78,7 @@
 		020524641FAD853000200249 /* CTFHU */ = {
 			isa = PBXGroup;
 			children = (
+				025001401FAD93580036D650 /* Source */,
 				020524651FAD853000200249 /* AppDelegate.swift */,
 				020524671FAD853000200249 /* FirstViewController.swift */,
 				020524691FAD853000200249 /* SecondViewController.swift */,
@@ -63,8 +86,26 @@
 				0205246E1FAD853000200249 /* Assets.xcassets */,
 				020524701FAD853000200249 /* LaunchScreen.storyboard */,
 				020524731FAD853000200249 /* Info.plist */,
+				0250013C1FAD90C30036D650 /* TestFlagViewController.swift */,
 			);
 			path = CTFHU;
+			sourceTree = "<group>";
+		};
+		025001401FAD93580036D650 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				027594AE1FADA103007B6F34 /* CGPoint+Extensions.swift */,
+				027594B11FADA104007B6F34 /* CLLocation+Extensions.swift */,
+				027594AC1FADA103007B6F34 /* FloatingPoint+Radians.swift */,
+				027594B21FADA104007B6F34 /* LocationManager.swift */,
+				027594B01FADA104007B6F34 /* LocationNode.swift */,
+				027594B31FADA104007B6F34 /* SceneLocationEstimate.swift */,
+				027594AF1FADA104007B6F34 /* SceneLocationEstimate+Extensions.swift */,
+				027594B51FADA104007B6F34 /* SceneLocationView.swift */,
+				027594B41FADA104007B6F34 /* SCNNode+Extensions.swift */,
+				027594AD1FADA103007B6F34 /* SCNVector3+Extensions.swift */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,9 +180,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				027594BA1FADA104007B6F34 /* LocationNode.swift in Sources */,
+				027594BB1FADA104007B6F34 /* CLLocation+Extensions.swift in Sources */,
+				027594BF1FADA104007B6F34 /* SceneLocationView.swift in Sources */,
+				027594B81FADA104007B6F34 /* CGPoint+Extensions.swift in Sources */,
+				027594BC1FADA104007B6F34 /* LocationManager.swift in Sources */,
+				0250013D1FAD90C30036D650 /* TestFlagViewController.swift in Sources */,
+				027594B71FADA104007B6F34 /* SCNVector3+Extensions.swift in Sources */,
+				027594B61FADA104007B6F34 /* FloatingPoint+Radians.swift in Sources */,
 				0205246A1FAD853000200249 /* SecondViewController.swift in Sources */,
 				020524661FAD853000200249 /* AppDelegate.swift in Sources */,
+				027594BD1FADA104007B6F34 /* SceneLocationEstimate.swift in Sources */,
+				027594BE1FADA104007B6F34 /* SCNNode+Extensions.swift in Sources */,
 				020524681FAD853000200249 /* FirstViewController.swift in Sources */,
+				027594B91FADA104007B6F34 /* SceneLocationEstimate+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
