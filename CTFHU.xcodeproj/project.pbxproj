@@ -27,7 +27,6 @@
 		02E69EBF1FAEE29C000F9A3D /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E69EBE1FAEE29C000F9A3D /* LeaderboardViewController.swift */; };
 		02E69EC31FAEF685000F9A3D /* EmbededViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E69EC21FAEF685000F9A3D /* EmbededViewController.swift */; };
 		02E69EC51FAEF9C9000F9A3D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E69EC41FAEF9C9000F9A3D /* ProfileViewController.swift */; };
-		02E69EC71FAEFA88000F9A3D /* MyTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E69EC61FAEFA88000F9A3D /* MyTabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,7 +52,6 @@
 		02E69EBE1FAEE29C000F9A3D /* LeaderboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
 		02E69EC21FAEF685000F9A3D /* EmbededViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbededViewController.swift; sourceTree = "<group>"; };
 		02E69EC41FAEF9C9000F9A3D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		02E69EC61FAEFA88000F9A3D /* MyTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +96,6 @@
 				02E69EBE1FAEE29C000F9A3D /* LeaderboardViewController.swift */,
 				02E69EC21FAEF685000F9A3D /* EmbededViewController.swift */,
 				02E69EC41FAEF9C9000F9A3D /* ProfileViewController.swift */,
-				02E69EC61FAEFA88000F9A3D /* MyTabBarViewController.swift */,
 			);
 			path = CTFHU;
 			sourceTree = "<group>";
@@ -192,7 +189,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02E69EC71FAEFA88000F9A3D /* MyTabBarViewController.swift in Sources */,
 				027594BA1FADA104007B6F34 /* LocationNode.swift in Sources */,
 				027594BB1FADA104007B6F34 /* CLLocation+Extensions.swift in Sources */,
 				027594BF1FADA104007B6F34 /* SceneLocationView.swift in Sources */,

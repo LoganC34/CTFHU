@@ -222,11 +222,16 @@
                                     <segue destination="Oh2-nL-99k" kind="unwind" identifier="unwindToCurrentGame" unwindAction="unwindToCurrentGameWithSegue:" id="d5E-KG-nA8"/>
                                 </connections>
                             </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Tp0-7v-qiI">
+                                <rect key="frame" x="112" y="37" width="150" height="2.5"/>
+                            </progressView>
                         </subviews>
-                        <color key="tintColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="frQ-FO-VZA" firstAttribute="leading" secondItem="zlo-C0-Czp" secondAttribute="leadingMargin" id="6Q3-HV-bgS"/>
+                            <constraint firstItem="Tp0-7v-qiI" firstAttribute="leading" secondItem="zlo-C0-Czp" secondAttribute="leadingMargin" constant="96" id="aho-gb-exQ"/>
                             <constraint firstItem="frQ-FO-VZA" firstAttribute="centerY" secondItem="zlo-C0-Czp" secondAttribute="centerY" id="mC1-aO-CA5"/>
+                            <constraint firstItem="Tp0-7v-qiI" firstAttribute="centerX" secondItem="zlo-C0-Czp" secondAttribute="centerX" id="o3q-7b-Qxk"/>
+                            <constraint firstItem="Tp0-7v-qiI" firstAttribute="centerY" secondItem="frQ-FO-VZA" secondAttribute="centerY" id="vah-N3-iCc"/>
                         </constraints>
                     </view>
                 </viewController>
