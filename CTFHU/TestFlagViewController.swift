@@ -86,6 +86,7 @@ class TestFlagViewController: UIViewController {
         }
 
         //view.addSubview(sceneLocationView)
+        
     }
 
 
@@ -104,12 +105,15 @@ class TestFlagViewController: UIViewController {
         super.viewWillAppear(animated)
         
         //self.navigationController?.setNavigationBarHidden(true, animated: false)
-        self.navigationController?.navigationItem.backBarButtonItem?.accessibilityElementsHidden = false
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        self.tabBarController?.tabBar.isHidden = true
         sceneLocationView.run()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        self.tabBarController?.tabBar.isHidden = false
         sceneLocationView.pause()
     }
     
