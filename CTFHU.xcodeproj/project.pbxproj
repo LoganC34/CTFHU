@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		020524661FAD853000200249 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020524651FAD853000200249 /* AppDelegate.swift */; };
-		020524681FAD853000200249 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020524671FAD853000200249 /* FirstViewController.swift */; };
-		0205246A1FAD853000200249 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020524691FAD853000200249 /* SecondViewController.swift */; };
+		020524681FAD853000200249 /* CurrentGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020524671FAD853000200249 /* CurrentGameViewController.swift */; };
+		0205246A1FAD853000200249 /* TeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020524691FAD853000200249 /* TeamViewController.swift */; };
 		0205246D1FAD853000200249 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0205246B1FAD853000200249 /* Main.storyboard */; };
 		0205246F1FAD853000200249 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0205246E1FAD853000200249 /* Assets.xcassets */; };
 		020524721FAD853000200249 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 020524701FAD853000200249 /* LaunchScreen.storyboard */; };
@@ -24,13 +24,17 @@
 		027594BD1FADA104007B6F34 /* SceneLocationEstimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027594B31FADA104007B6F34 /* SceneLocationEstimate.swift */; };
 		027594BE1FADA104007B6F34 /* SCNNode+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027594B41FADA104007B6F34 /* SCNNode+Extensions.swift */; };
 		027594BF1FADA104007B6F34 /* SceneLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027594B51FADA104007B6F34 /* SceneLocationView.swift */; };
+		02E69EBF1FAEE29C000F9A3D /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E69EBE1FAEE29C000F9A3D /* LeaderboardViewController.swift */; };
+		02E69EC31FAEF685000F9A3D /* EmbededViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E69EC21FAEF685000F9A3D /* EmbededViewController.swift */; };
+		02E69EC51FAEF9C9000F9A3D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E69EC41FAEF9C9000F9A3D /* ProfileViewController.swift */; };
+		02E69EC71FAEFA88000F9A3D /* MyTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E69EC61FAEFA88000F9A3D /* MyTabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		020524621FAD853000200249 /* CTFHU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CTFHU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		020524651FAD853000200249 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		020524671FAD853000200249 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		020524691FAD853000200249 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		020524671FAD853000200249 /* CurrentGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentGameViewController.swift; sourceTree = "<group>"; };
+		020524691FAD853000200249 /* TeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewController.swift; sourceTree = "<group>"; };
 		0205246C1FAD853000200249 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0205246E1FAD853000200249 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		020524711FAD853000200249 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -46,6 +50,10 @@
 		027594B31FADA104007B6F34 /* SceneLocationEstimate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneLocationEstimate.swift; sourceTree = "<group>"; };
 		027594B41FADA104007B6F34 /* SCNNode+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SCNNode+Extensions.swift"; sourceTree = "<group>"; };
 		027594B51FADA104007B6F34 /* SceneLocationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneLocationView.swift; sourceTree = "<group>"; };
+		02E69EBE1FAEE29C000F9A3D /* LeaderboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
+		02E69EC21FAEF685000F9A3D /* EmbededViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbededViewController.swift; sourceTree = "<group>"; };
+		02E69EC41FAEF9C9000F9A3D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		02E69EC61FAEFA88000F9A3D /* MyTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,13 +88,17 @@
 			children = (
 				025001401FAD93580036D650 /* Source */,
 				020524651FAD853000200249 /* AppDelegate.swift */,
-				020524671FAD853000200249 /* FirstViewController.swift */,
-				020524691FAD853000200249 /* SecondViewController.swift */,
+				020524671FAD853000200249 /* CurrentGameViewController.swift */,
+				020524691FAD853000200249 /* TeamViewController.swift */,
 				0205246B1FAD853000200249 /* Main.storyboard */,
 				0205246E1FAD853000200249 /* Assets.xcassets */,
 				020524701FAD853000200249 /* LaunchScreen.storyboard */,
 				020524731FAD853000200249 /* Info.plist */,
 				0250013C1FAD90C30036D650 /* TestFlagViewController.swift */,
+				02E69EBE1FAEE29C000F9A3D /* LeaderboardViewController.swift */,
+				02E69EC21FAEF685000F9A3D /* EmbededViewController.swift */,
+				02E69EC41FAEF9C9000F9A3D /* ProfileViewController.swift */,
+				02E69EC61FAEFA88000F9A3D /* MyTabBarViewController.swift */,
 			);
 			path = CTFHU;
 			sourceTree = "<group>";
@@ -180,6 +192,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02E69EC71FAEFA88000F9A3D /* MyTabBarViewController.swift in Sources */,
 				027594BA1FADA104007B6F34 /* LocationNode.swift in Sources */,
 				027594BB1FADA104007B6F34 /* CLLocation+Extensions.swift in Sources */,
 				027594BF1FADA104007B6F34 /* SceneLocationView.swift in Sources */,
@@ -187,12 +200,15 @@
 				027594BC1FADA104007B6F34 /* LocationManager.swift in Sources */,
 				0250013D1FAD90C30036D650 /* TestFlagViewController.swift in Sources */,
 				027594B71FADA104007B6F34 /* SCNVector3+Extensions.swift in Sources */,
+				02E69EC51FAEF9C9000F9A3D /* ProfileViewController.swift in Sources */,
+				02E69EBF1FAEE29C000F9A3D /* LeaderboardViewController.swift in Sources */,
+				02E69EC31FAEF685000F9A3D /* EmbededViewController.swift in Sources */,
 				027594B61FADA104007B6F34 /* FloatingPoint+Radians.swift in Sources */,
-				0205246A1FAD853000200249 /* SecondViewController.swift in Sources */,
+				0205246A1FAD853000200249 /* TeamViewController.swift in Sources */,
 				020524661FAD853000200249 /* AppDelegate.swift in Sources */,
 				027594BD1FADA104007B6F34 /* SceneLocationEstimate.swift in Sources */,
 				027594BE1FADA104007B6F34 /* SCNNode+Extensions.swift in Sources */,
-				020524681FAD853000200249 /* FirstViewController.swift in Sources */,
+				020524681FAD853000200249 /* CurrentGameViewController.swift in Sources */,
 				027594B91FADA104007B6F34 /* SceneLocationEstimate+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

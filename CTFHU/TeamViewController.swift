@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  SecondViewController.swift
 //  CTFHU
 //
 //  Created by Logan Cain on 11/4/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class TeamViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

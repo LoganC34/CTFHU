@@ -42,6 +42,7 @@ class TestFlagViewController: UIViewController {
     var adjustNorthByTappingSidesOfScreen = false
     
 
+    @IBOutlet weak var flagSeer: ARSCNView!
     @IBOutlet weak var sceneView: ARSCNView!
     
     override func viewDidLoad() {
@@ -50,14 +51,13 @@ class TestFlagViewController: UIViewController {
         sceneLocationView.run()
         view.addSubview(sceneLocationView)
         // Do any additional setup after loading the view.
-        
-        
-        
-        let coordinate = CLLocationCoordinate2D(latitude: 34.123962, longitude: -87.932725)
+
+        let coordinate = CLLocationCoordinate2D(latitude: 34.124279, longitude: -87.930055)
         let location = CLLocation(coordinate: coordinate, altitude: 140)
         let image = UIImage(named: "pinA")!
         
         let annotationNode = LocationAnnotationNode(location: location, image: image)
+        annotationNode.scaleRelativeToDistance = true
         sceneLocationView.addLocationNodeWithConfirmedLocation(locationNode: annotationNode)
         view.addSubview(sceneLocationView)
         
@@ -67,6 +67,7 @@ class TestFlagViewController: UIViewController {
         
         let annotationNodeB = LocationAnnotationNode(location: locationB, image: imageB)
         sceneLocationView.addLocationNodeWithConfirmedLocation(locationNode: annotationNodeB)
+        annotationNodeB.scaleRelativeToDistance = true
         view.addSubview(sceneLocationView)
         
         let coordinateC = CLLocationCoordinate2D(latitude: 34.122712, longitude: -87.927708)
@@ -75,6 +76,7 @@ class TestFlagViewController: UIViewController {
         
         let annotationNodeC = LocationAnnotationNode(location: locationC, image: imageC)
         sceneLocationView.addLocationNodeWithConfirmedLocation(locationNode: annotationNodeC)
+        annotationNodeC.scaleRelativeToDistance = true
         view.addSubview(sceneLocationView)
         
         
@@ -89,7 +91,7 @@ class TestFlagViewController: UIViewController {
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
+        self.view.addSubview(topBar)
         sceneLocationView.frame = view.bounds
     }
     
@@ -100,6 +102,9 @@ class TestFlagViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        //self.navigationController?.setNavigationBarHidden(true, animated: false)
+        self.navigationController?.navigationItem.backBarButtonItem?.accessibilityElementsHidden = false
         sceneLocationView.run()
     }
     
@@ -108,8 +113,7 @@ class TestFlagViewController: UIViewController {
         sceneLocationView.pause()
     }
     
-   
-
+    @IBOutlet weak var topBar: UIView!
     /*
     // MARK: - Navigation
 
