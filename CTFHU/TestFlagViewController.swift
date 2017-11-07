@@ -52,7 +52,7 @@ class TestFlagViewController: UIViewController {
         view.addSubview(sceneLocationView)
         // Do any additional setup after loading the view.
 
-        let coordinate = CLLocationCoordinate2D(latitude: 34.124279, longitude: -87.930055)
+        let coordinate = CLLocationCoordinate2D(latitude: 35.440208, longitude: -88.636866)
         let location = CLLocation(coordinate: coordinate, altitude: 140)
         let image = UIImage(named: "pinA")!
         
@@ -61,7 +61,7 @@ class TestFlagViewController: UIViewController {
         sceneLocationView.addLocationNodeWithConfirmedLocation(locationNode: annotationNode)
         view.addSubview(sceneLocationView)
         
-        let coordinateB = CLLocationCoordinate2D(latitude: 34.124617, longitude: -87.922878)
+        let coordinateB = CLLocationCoordinate2D(latitude: 35.439577, longitude: -88.638023)
         let locationB = CLLocation(coordinate: coordinateB, altitude: 140)
         let imageB = UIImage(named: "pinB")!
         
@@ -70,7 +70,7 @@ class TestFlagViewController: UIViewController {
         annotationNodeB.scaleRelativeToDistance = true
         view.addSubview(sceneLocationView)
         
-        let coordinateC = CLLocationCoordinate2D(latitude: 34.122712, longitude: -87.927708)
+        let coordinateC = CLLocationCoordinate2D(latitude: 35.439315, longitude: -88.638892)
         let locationC = CLLocation(coordinate: coordinateC, altitude: 140)
         let imageC = UIImage(named: "pinC")!
         
