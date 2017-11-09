@@ -43,7 +43,7 @@
                                     <segue destination="Bi1-2e-uWv" kind="show" id="OYP-TV-upQ"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ARButton" translatesAutoresizingMaskIntoConstraints="NO" id="kYH-ml-jdX">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AR Image" translatesAutoresizingMaskIntoConstraints="NO" id="kYH-ml-jdX">
                                 <rect key="frame" x="151" y="448" width="74" height="73"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="73" id="pD7-aG-lD7"/>
@@ -378,7 +378,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ARButton" width="128" height="128"/>
+        <image name="AR Image" width="128" height="128"/>
         <image name="Leaderboard" width="25" height="25"/>
         <image name="Play" width="25" height="25"/>
         <image name="Profile" width="25" height="25"/>
