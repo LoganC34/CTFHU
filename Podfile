@@ -1,7 +1,6 @@
-platform :ios, '11.0'
-
-# You need to set target when you use CocoaPods 1.0.0 or later.
 target 'CTFHU' do
+# IMPORTANT: Make sure use_frameworks! is included at the top of the file
 use_frameworks!
-pod 'CocoaLumberjack/Swift'
+platform :ios, '8.0'
+pod 'MKMagneticProgress'
 end

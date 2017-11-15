@@ -11,11 +11,13 @@ import ARKit
 import SceneKit
 import CoreLocation
 import MapKit
+import MKMagneticProgress
 
 
 
 class TestFlagViewController: UIViewController {
 
+    
     let sceneLocationView = SceneLocationView()
     
     let mapView = MKMapView()

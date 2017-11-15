@@ -1,0 +1,6 @@
+framework module Pods_CTFHU {
+  umbrella header "Pods-CTFHU-umbrella.h"
+
+  export *
+  module * { export * }
+}

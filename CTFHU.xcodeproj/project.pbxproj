@@ -28,9 +28,11 @@
 		02E69EBF1FAEE29C000F9A3D /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E69EBE1FAEE29C000F9A3D /* LeaderboardViewController.swift */; };
 		02E69EC31FAEF685000F9A3D /* EmbededViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E69EC21FAEF685000F9A3D /* EmbededViewController.swift */; };
 		02E69EC51FAEF9C9000F9A3D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E69EC41FAEF9C9000F9A3D /* ProfileViewController.swift */; };
+		DBAB324FD83956E065ACDB1B /* Pods_CTFHU.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5FD6A7802AFD295826A2781 /* Pods_CTFHU.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0016DCCEC28C3487C6D719D8 /* Pods-CTFHU.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CTFHU.release.xcconfig"; path = "Pods/Target Support Files/Pods-CTFHU/Pods-CTFHU.release.xcconfig"; sourceTree = "<group>"; };
 		020524621FAD853000200249 /* CTFHU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CTFHU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		020524651FAD853000200249 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		020524671FAD853000200249 /* CurrentGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentGameViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +56,8 @@
 		02E69EBE1FAEE29C000F9A3D /* LeaderboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
 		02E69EC21FAEF685000F9A3D /* EmbededViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbededViewController.swift; sourceTree = "<group>"; };
 		02E69EC41FAEF9C9000F9A3D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		060A3A2ADB009FB419D28BE3 /* Pods-CTFHU.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CTFHU.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CTFHU/Pods-CTFHU.debug.xcconfig"; sourceTree = "<group>"; };
+		A5FD6A7802AFD295826A2781 /* Pods_CTFHU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CTFHU.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBAB324FD83956E065ACDB1B /* Pods_CTFHU.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +77,8 @@
 			children = (
 				020524641FAD853000200249 /* CTFHU */,
 				020524631FAD853000200249 /* Products */,
+				0207FA4A1FB9338A00468E5E /* Frameworks */,
+				D6E583D3528F8F4B276CE36C /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +110,14 @@
 			path = CTFHU;
 			sourceTree = "<group>";
 		};
+		0207FA4A1FB9338A00468E5E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A5FD6A7802AFD295826A2781 /* Pods_CTFHU.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		025001401FAD93580036D650 /* Source */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +135,15 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
+		D6E583D3528F8F4B276CE36C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				060A3A2ADB009FB419D28BE3 /* Pods-CTFHU.debug.xcconfig */,
+				0016DCCEC28C3487C6D719D8 /* Pods-CTFHU.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -127,9 +151,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 020524761FAD853000200249 /* Build configuration list for PBXNativeTarget "CTFHU" */;
 			buildPhases = (
+				8B088B8A283DF9524B36D882 /* [CP] Check Pods Manifest.lock */,
 				0205245E1FAD853000200249 /* Sources */,
 				0205245F1FAD853000200249 /* Frameworks */,
 				020524601FAD853000200249 /* Resources */,
+				753FC7C51CD25B6EF02DD381 /* [CP] Embed Pods Frameworks */,
+				7ADB862120E32F22F4A72076 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -186,6 +213,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		753FC7C51CD25B6EF02DD381 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CTFHU/Pods-CTFHU-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MKMagneticProgress/MKMagneticProgress.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MKMagneticProgress.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CTFHU/Pods-CTFHU-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7ADB862120E32F22F4A72076 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CTFHU/Pods-CTFHU-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B088B8A283DF9524B36D882 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CTFHU-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0205245E1FAD853000200249 /* Sources */ = {
@@ -344,6 +425,7 @@
 		};
 		020524771FAD853000200249 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 060A3A2ADB009FB419D28BE3 /* Pods-CTFHU.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -359,6 +441,7 @@
 		};
 		020524781FAD853000200249 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0016DCCEC28C3487C6D719D8 /* Pods-CTFHU.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
