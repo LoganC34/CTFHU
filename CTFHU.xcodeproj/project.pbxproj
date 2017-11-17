@@ -14,8 +14,15 @@
 		0205246F1FAD853000200249 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0205246E1FAD853000200249 /* Assets.xcassets */; };
 		020524721FAD853000200249 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 020524701FAD853000200249 /* LaunchScreen.storyboard */; };
 		021234FC1FB2499700A3C073 /* ARButton Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021234FB1FB2499700A3C073 /* ARButton Controller.swift */; };
+		022A2E421FBEDC170009062B /* SegueTeamPlayersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022A2E411FBEDC170009062B /* SegueTeamPlayersTableViewController.swift */; };
+		022A2E441FBEDC330009062B /* TeamPlayerNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022A2E431FBEDC330009062B /* TeamPlayerNameTableViewCell.swift */; };
 		0239677C1FBBF17F007EDC21 /* CaptureBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0239677B1FBBF17F007EDC21 /* CaptureBarViewController.swift */; };
 		0250013D1FAD90C30036D650 /* TestFlagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0250013C1FAD90C30036D650 /* TestFlagViewController.swift */; };
+		025D013E1FBE96F7000875BB /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025D013D1FBE96F7000875BB /* Team.swift */; };
+		025D01401FBE990A000875BB /* teamDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025D013F1FBE990A000875BB /* teamDataSet.swift */; };
+		025D01421FBE99FD000875BB /* LeaderboardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025D01411FBE99FD000875BB /* LeaderboardTableViewController.swift */; };
+		025D01441FBED05B000875BB /* LeaderboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025D01431FBED05B000875BB /* LeaderboardTableViewCell.swift */; };
+		025D01461FBED23C000875BB /* TeamSegueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025D01451FBED23C000875BB /* TeamSegueViewController.swift */; };
 		027594B61FADA104007B6F34 /* FloatingPoint+Radians.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027594AC1FADA103007B6F34 /* FloatingPoint+Radians.swift */; };
 		027594B71FADA104007B6F34 /* SCNVector3+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027594AD1FADA103007B6F34 /* SCNVector3+Extensions.swift */; };
 		027594B81FADA104007B6F34 /* CGPoint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027594AE1FADA103007B6F34 /* CGPoint+Extensions.swift */; };
@@ -47,8 +54,15 @@
 		020524711FAD853000200249 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		020524731FAD853000200249 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		021234FB1FB2499700A3C073 /* ARButton Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARButton Controller.swift"; sourceTree = "<group>"; };
+		022A2E411FBEDC170009062B /* SegueTeamPlayersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueTeamPlayersTableViewController.swift; sourceTree = "<group>"; };
+		022A2E431FBEDC330009062B /* TeamPlayerNameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamPlayerNameTableViewCell.swift; sourceTree = "<group>"; };
 		0239677B1FBBF17F007EDC21 /* CaptureBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CaptureBarViewController.swift; path = CTFHU/CaptureBarViewController.swift; sourceTree = SOURCE_ROOT; };
 		0250013C1FAD90C30036D650 /* TestFlagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFlagViewController.swift; sourceTree = "<group>"; };
+		025D013D1FBE96F7000875BB /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Team.swift; path = /Users/Logan/Desktop/CTFHU/CTFHU/Team.swift; sourceTree = "<absolute>"; };
+		025D013F1FBE990A000875BB /* teamDataSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = teamDataSet.swift; sourceTree = "<group>"; };
+		025D01411FBE99FD000875BB /* LeaderboardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardTableViewController.swift; sourceTree = "<group>"; };
+		025D01431FBED05B000875BB /* LeaderboardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardTableViewCell.swift; sourceTree = "<group>"; };
+		025D01451FBED23C000875BB /* TeamSegueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamSegueViewController.swift; sourceTree = "<group>"; };
 		027594AC1FADA103007B6F34 /* FloatingPoint+Radians.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FloatingPoint+Radians.swift"; sourceTree = "<group>"; };
 		027594AD1FADA103007B6F34 /* SCNVector3+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SCNVector3+Extensions.swift"; sourceTree = "<group>"; };
 		027594AE1FADA103007B6F34 /* CGPoint+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extensions.swift"; sourceTree = "<group>"; };
@@ -114,6 +128,7 @@
 				020524731FAD853000200249 /* Info.plist */,
 				0250013C1FAD90C30036D650 /* TestFlagViewController.swift */,
 				02E69EBE1FAEE29C000F9A3D /* LeaderboardViewController.swift */,
+				025D01411FBE99FD000875BB /* LeaderboardTableViewController.swift */,
 				02E69EC21FAEF685000F9A3D /* EmbededViewController.swift */,
 				02E69EC41FAEF9C9000F9A3D /* ProfileViewController.swift */,
 				021234FB1FB2499700A3C073 /* ARButton Controller.swift */,
@@ -121,6 +136,12 @@
 				027DA7B01FBD6876009EBB22 /* Player.swift */,
 				027DA7B21FBD6935009EBB22 /* PlayerTableViewController.swift */,
 				027DA7B41FBD6984009EBB22 /* PlayerTableViewCell.swift */,
+				025D013D1FBE96F7000875BB /* Team.swift */,
+				025D013F1FBE990A000875BB /* teamDataSet.swift */,
+				025D01431FBED05B000875BB /* LeaderboardTableViewCell.swift */,
+				025D01451FBED23C000875BB /* TeamSegueViewController.swift */,
+				022A2E431FBEDC330009062B /* TeamPlayerNameTableViewCell.swift */,
+				022A2E411FBEDC170009062B /* SegueTeamPlayersTableViewController.swift */,
 			);
 			path = CTFHU;
 			sourceTree = "<group>";
@@ -295,16 +316,23 @@
 				027DA7B11FBD6876009EBB22 /* Player.swift in Sources */,
 				027594B81FADA104007B6F34 /* CGPoint+Extensions.swift in Sources */,
 				027594BC1FADA104007B6F34 /* LocationManager.swift in Sources */,
+				025D01461FBED23C000875BB /* TeamSegueViewController.swift in Sources */,
+				025D01401FBE990A000875BB /* teamDataSet.swift in Sources */,
 				027DA7B51FBD6984009EBB22 /* PlayerTableViewCell.swift in Sources */,
 				0239677C1FBBF17F007EDC21 /* CaptureBarViewController.swift in Sources */,
 				0250013D1FAD90C30036D650 /* TestFlagViewController.swift in Sources */,
 				027594B71FADA104007B6F34 /* SCNVector3+Extensions.swift in Sources */,
 				027DA7B31FBD6935009EBB22 /* PlayerTableViewController.swift in Sources */,
+				025D013E1FBE96F7000875BB /* Team.swift in Sources */,
 				02E69EC51FAEF9C9000F9A3D /* ProfileViewController.swift in Sources */,
 				02E69EBF1FAEE29C000F9A3D /* LeaderboardViewController.swift in Sources */,
 				02E69EC31FAEF685000F9A3D /* EmbededViewController.swift in Sources */,
+				022A2E421FBEDC170009062B /* SegueTeamPlayersTableViewController.swift in Sources */,
 				027594B61FADA104007B6F34 /* FloatingPoint+Radians.swift in Sources */,
+				025D01441FBED05B000875BB /* LeaderboardTableViewCell.swift in Sources */,
 				0205246A1FAD853000200249 /* TeamViewController.swift in Sources */,
+				022A2E441FBEDC330009062B /* TeamPlayerNameTableViewCell.swift in Sources */,
+				025D01421FBE99FD000875BB /* LeaderboardTableViewController.swift in Sources */,
 				020524661FAD853000200249 /* AppDelegate.swift in Sources */,
 				027594BD1FADA104007B6F34 /* SceneLocationEstimate.swift in Sources */,
 				029541E51FBCE5D000DD3659 /* Dataset.swift in Sources */,
