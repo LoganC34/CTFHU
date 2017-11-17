@@ -11,15 +11,16 @@ import UIKit
 class CurrentGameViewController: UIViewController {
 
     @IBOutlet weak var arButton: UIButton!
-    
-    @IBOutlet weak var teamOneTable: UITableView!
-    
-    @IBOutlet weak var teamTwoTable: UITableView!
+
+
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         arButton.layer.shadowColor = UIColor.black.cgColor
@@ -29,20 +30,12 @@ class CurrentGameViewController: UIViewController {
         arButton.layer.shadowOpacity = 0.5
         arButton.layer.cornerRadius = 0.5 * arButton.bounds.size.width
         
-        teamOneTable.layer.shadowColor = UIColor.black.cgColor
-        teamOneTable.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
-        teamOneTable.layer.masksToBounds = false
-        teamOneTable.layer.shadowRadius = 1.0
-        teamOneTable.layer.shadowOpacity = 0.5
-        teamOneTable.layer.cornerRadius = 0.2 * teamOneTable.bounds.size.height
-        
-        teamTwoTable.layer.shadowColor = UIColor.black.cgColor
-        teamTwoTable.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
-        teamTwoTable.layer.masksToBounds = false
-        teamTwoTable.layer.shadowRadius = 1.0
-        teamTwoTable.layer.shadowOpacity = 0.5
-        teamTwoTable.layer.cornerRadius = 0.2 * teamTwoTable.bounds.size.height
-        
+        /*teamTable.layer.shadowColor = UIColor.black.cgColor
+        teamTable.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+        teamTable.layer.masksToBounds = false
+        teamTable.layer.shadowRadius = 1.0
+        teamTable.layer.shadowOpacity = 0.5
+        teamTable.layer.cornerRadius = 0.2 * teamTable.bounds.size.height*/
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -51,5 +44,13 @@ class CurrentGameViewController: UIViewController {
  }
     
     @IBAction func unwindToCurrentGame(segue:UIStoryboardSegue) { }
+    
+    
+    let textCellIdentifierOne = "TeamOne"
+    let textCellIdentifierTwo = "TeamTwo"
+    let swiftBlogs = ["Ray Wenderlich", "NSHipster", "iOS Developer Tips", "Jameson Quave", "Natasha The Robot", "Coding Explorer", "That Thing In Swift", "Andrew Bancroft", "iAchieved.it", "Airspeed Velocity"]
+    
 }
+
+
 

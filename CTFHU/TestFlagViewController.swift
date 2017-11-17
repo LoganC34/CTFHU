@@ -95,6 +95,7 @@ class TestFlagViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         self.view.addSubview(topBar)
+        self.view.addSubview(bottomBar)
         sceneLocationView.frame = view.bounds
     }
     
@@ -120,6 +121,7 @@ class TestFlagViewController: UIViewController {
     }
     
     @IBOutlet weak var topBar: UIView!
+    @IBOutlet weak var bottomBar: UIView!
     /*
     // MARK: - Navigation
 

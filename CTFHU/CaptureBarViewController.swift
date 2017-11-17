@@ -1,24 +1,36 @@
 //
-//  EmbededViewController.swift
+//  CaptureBarViewController.swift
 //  CTFHU
 //
-//  Created by Logan Cain on 11/5/17.
+//  Created by Logan Cain on 11/14/17.
 //  Copyright © 2017 Logan Cain. All rights reserved.
 //
 
 import UIKit
+import CoreGraphics
 import MKMagneticProgress
 
-class EmbededViewController: UIViewController {
+class CaptureBarViewController: UIViewController {
 
-    
-    
+    @IBOutlet weak var magProgress: MKMagneticProgress!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-      
 
+        
+         magProgress.setProgress(progress: CGFloat(0.4))
+         magProgress.progressShapeColor = UIColor.blue
+         magProgress.backgroundShapeColor = UIColor.black
+         magProgress.titleColor = UIColor.blue
+         magProgress.percentColor = UIColor.black
+         
+         magProgress.lineWidth = 10
+         magProgress.orientation = .bottom
+         magProgress.lineCap = .round
+         
+         magProgress.title = "Title"
+         magProgress.percentLabelFormat = "%.2f%%"
+        
         // Do any additional setup after loading the view.
     }
 
@@ -27,10 +39,7 @@ class EmbededViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func goBackToOneButtonTapped(_ sender: UIButton) {
-        performSegue(withIdentifier: "unwindToCurrentGame", sender: self)
-    }
-    
+
     /*
     // MARK: - Navigation
 
