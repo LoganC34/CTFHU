@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/Logan/Desktop/CTFHU/CTFHU/Team.swift">
-   </FileRef>
-   <FileRef
       location = "group:CTFHU.xcodeproj">
    </FileRef>
    <FileRef
