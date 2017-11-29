@@ -37,6 +37,7 @@
 		027DA7B51FBD6984009EBB22 /* PlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DA7B41FBD6984009EBB22 /* PlayerTableViewCell.swift */; };
 		029541E51FBCE5D000DD3659 /* Dataset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029541E41FBCE5D000DD3659 /* Dataset.swift */; };
 		02BDA07F1FCF557A00249159 /* Flag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BDA07E1FCF557A00249159 /* Flag.swift */; };
+		02BDA0811FCF5C5300249159 /* TeamDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BDA0801FCF5C5300249159 /* TeamDataSet.swift */; };
 		02E69EBF1FAEE29C000F9A3D /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E69EBE1FAEE29C000F9A3D /* LeaderboardViewController.swift */; };
 		02E69EC31FAEF685000F9A3D /* EmbededViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E69EC21FAEF685000F9A3D /* EmbededViewController.swift */; };
 		02E69EC51FAEF9C9000F9A3D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E69EC41FAEF9C9000F9A3D /* ProfileViewController.swift */; };
@@ -77,6 +78,7 @@
 		027DA7B41FBD6984009EBB22 /* PlayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTableViewCell.swift; sourceTree = "<group>"; };
 		029541E41FBCE5D000DD3659 /* Dataset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dataset.swift; sourceTree = "<group>"; };
 		02BDA07E1FCF557A00249159 /* Flag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flag.swift; sourceTree = "<group>"; };
+		02BDA0801FCF5C5300249159 /* TeamDataSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDataSet.swift; sourceTree = "<group>"; };
 		02E69EBE1FAEE29C000F9A3D /* LeaderboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
 		02E69EC21FAEF685000F9A3D /* EmbededViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbededViewController.swift; sourceTree = "<group>"; };
 		02E69EC41FAEF9C9000F9A3D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				025D01451FBED23C000875BB /* TeamSegueViewController.swift */,
 				022A2E431FBEDC330009062B /* TeamPlayerNameTableViewCell.swift */,
 				022A2E411FBEDC170009062B /* SegueTeamPlayersTableViewController.swift */,
+				02BDA0801FCF5C5300249159 /* TeamDataSet.swift */,
 			);
 			path = CTFHU;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				027594BF1FADA104007B6F34 /* SceneLocationView.swift in Sources */,
 				027DA7B11FBD6876009EBB22 /* Player.swift in Sources */,
 				027594B81FADA104007B6F34 /* CGPoint+Extensions.swift in Sources */,
+				02BDA0811FCF5C5300249159 /* TeamDataSet.swift in Sources */,
 				027594BC1FADA104007B6F34 /* LocationManager.swift in Sources */,
 				025D01461FBED23C000875BB /* TeamSegueViewController.swift in Sources */,
 				027DA7B51FBD6984009EBB22 /* PlayerTableViewCell.swift in Sources */,
