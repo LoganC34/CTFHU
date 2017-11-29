@@ -10,7 +10,7 @@ import UIKit
 
 class TeamSegueViewController: UIViewController {
 
-    var team: TeamObject?
+    var team: Team?
     
     override func viewDidLoad() {
         super.viewDidLoad()

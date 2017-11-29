@@ -10,15 +10,15 @@ import UIKit
 
 class LeaderboardTableViewController: UITableViewController {
     
-    var data: [TeamObject]?
-    var filteredData = [TeamObject]()
+    var data: [Team]?
+    var filteredData = [Team]()
     
     let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        data = teamDataSet.teamSampleData
+        data = TeamDataSet.teamSampleData
         
         setupSearchController()
         
@@ -61,7 +61,7 @@ class LeaderboardTableViewController: UITableViewController {
         
         if let leaderboardCell = cell as? LeaderboardTableViewCell {
             if let therealdata = data {
-                let team:TeamObject
+                let team:Team
                 
                 if isFiltering() {
                     team = filteredData[indexPath.row]

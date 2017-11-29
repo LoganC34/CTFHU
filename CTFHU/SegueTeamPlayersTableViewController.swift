@@ -10,12 +10,12 @@ import UIKit
 
 class SegueTeamPlayersTableViewController: UITableViewController {
 
-     var data: [TeamObject]?
+     var data: [Team]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        data = teamDataSet.teamSampleData
+        data = TeamDataSet.teamSampleData
   
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -39,7 +39,7 @@ class SegueTeamPlayersTableViewController: UITableViewController {
         
         if let teamPlayerCell = cell as? TeamPlayerNameTableViewCell {
             if let therealdata = data {
-                let team:TeamObject
+                let team:Team
                 team = therealdata[indexPath.row]
                 
                 
