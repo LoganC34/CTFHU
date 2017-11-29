@@ -9,7 +9,7 @@
 import Foundation
 
 class TeamDataSet {
-    //hello testing
+    
     static var playerRed1 = Player()
     static var playerRed2 = Player()
     static var playerRed3 = Player()
