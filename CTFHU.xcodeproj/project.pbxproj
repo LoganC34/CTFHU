@@ -14,6 +14,7 @@
 		0205246F1FAD853000200249 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0205246E1FAD853000200249 /* Assets.xcassets */; };
 		020524721FAD853000200249 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 020524701FAD853000200249 /* LaunchScreen.storyboard */; };
 		021234FC1FB2499700A3C073 /* ARButton Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021234FB1FB2499700A3C073 /* ARButton Controller.swift */; };
+		021DE38B1FD20285006BF064 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 021DE38A1FD20285006BF064 /* MapKit.framework */; };
 		022A2E421FBEDC170009062B /* SegueTeamPlayersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022A2E411FBEDC170009062B /* SegueTeamPlayersTableViewController.swift */; };
 		022A2E441FBEDC330009062B /* TeamPlayerNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022A2E431FBEDC330009062B /* TeamPlayerNameTableViewCell.swift */; };
 		0239677C1FBBF17F007EDC21 /* CaptureBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0239677B1FBBF17F007EDC21 /* CaptureBarViewController.swift */; };
@@ -56,6 +57,7 @@
 		020524711FAD853000200249 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		020524731FAD853000200249 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		021234FB1FB2499700A3C073 /* ARButton Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARButton Controller.swift"; sourceTree = "<group>"; };
+		021DE38A1FD20285006BF064 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		022A2E411FBEDC170009062B /* SegueTeamPlayersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueTeamPlayersTableViewController.swift; sourceTree = "<group>"; };
 		022A2E431FBEDC330009062B /* TeamPlayerNameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamPlayerNameTableViewCell.swift; sourceTree = "<group>"; };
 		0239677B1FBBF17F007EDC21 /* CaptureBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CaptureBarViewController.swift; path = CTFHU/CaptureBarViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -93,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				021DE38B1FD20285006BF064 /* MapKit.framework in Frameworks */,
 				DBAB324FD83956E065ACDB1B /* Pods_CTFHU.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -155,6 +158,7 @@
 		0207FA4A1FB9338A00468E5E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				021DE38A1FD20285006BF064 /* MapKit.framework */,
 				A5FD6A7802AFD295826A2781 /* Pods_CTFHU.framework */,
 			);
 			name = Frameworks;
@@ -222,6 +226,11 @@
 					020524611FAD853000200249 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};

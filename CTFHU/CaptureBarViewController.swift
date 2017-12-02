@@ -10,9 +10,11 @@ import UIKit
 import CoreGraphics
 import MKMagneticProgress
 
+
 class CaptureBarViewController: UIViewController {
 
     @IBOutlet weak var magProgress: MKMagneticProgress!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

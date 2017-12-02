@@ -5,7 +5,6 @@
 //  Created by Logan Cain on 11/4/17.
 //  Copyright © 2017 Logan Cain. All rights reserved.
 //
-
 import UIKit
 import ARKit
 import SceneKit
@@ -16,7 +15,7 @@ import MKMagneticProgress
 
 
 class TestFlagViewController: UIViewController {
-
+    
     let sceneLocationView = SceneLocationView()
     
     let mapView = MKMapView()
@@ -41,9 +40,9 @@ class TestFlagViewController: UIViewController {
     
     var updateInfoLabelTimer: Timer?
     
-    var adjustNorthByTappingSidesOfScreen = false
+    var adjustNorthByTappingSidesOfScreen = true
     
-
+    
     @IBOutlet weak var flagSeer: ARSCNView!
     @IBOutlet weak var sceneView: ARSCNView!
     
@@ -53,11 +52,10 @@ class TestFlagViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         sceneLocationView.run()
         view.addSubview(sceneLocationView)
         // Do any additional setup after loading the view.
-
         
         
         flagA.flagName = "Flag A"
@@ -118,12 +116,12 @@ class TestFlagViewController: UIViewController {
         sceneLocationView.addLocationNodeWithConfirmedLocation(locationNode: annotationNodeC)
         annotationNodeC.scaleRelativeToDistance = true
         view.addSubview(sceneLocationView)
-
+        
         if displayDebugging {
             sceneLocationView.showFeaturePoints = true
             
         }
-
+        
         //view.addSubview(sceneLocationView)
         
         locationManager.delegate = self
@@ -136,7 +134,7 @@ class TestFlagViewController: UIViewController {
         self.setUpGeofenceForFlagC()
         
     }
-
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         self.view.addSubview(topBar)
@@ -168,14 +166,13 @@ class TestFlagViewController: UIViewController {
     @IBOutlet weak var topBar: UIView!
     @IBOutlet weak var bottomBar: UIView!
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+     // MARK: - Navigation
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
     func setUpGeofenceForFlagA() {
         let geofenceRegionCenterFlagA = CLLocationCoordinate2DMake( flagA.lat!, flagA.long!);
         let geofenceRegionFlagA = CLCircularRegion(center: geofenceRegionCenterFlagA, radius: flagA.flagRadius!, identifier: "Flag A");
@@ -217,7 +214,7 @@ extension TestFlagViewController: CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion){
-       showAlert(title: "Hello!", message: "Hello again!")
+        showAlert(title: "Hello!", message: "Hello again!")
     }
     
     func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion){
