@@ -61,8 +61,8 @@ class TestFlagViewController: UIViewController {
         flagA.flagName = "Flag A"
         //flagA.lat = 35.440208
         //flagA.long = -88.636866
-        flagA.lat = 35.438837
-        flagA.long = -88.634638
+        flagA.lat = 35.439060
+        flagA.long = -88.635680
         flagA.altitude = 140
         flagA.flagImageName = "pinA"
         flagA.flagControlledBy = "Red"
@@ -71,8 +71,8 @@ class TestFlagViewController: UIViewController {
         
         
         flagB.flagName = "Flag B"
-        flagB.lat = 35.439577
-        flagB.long = -88.638023
+        flagB.lat = 35.437750
+        flagB.long = -88.640306
         flagB.altitude = 140
         flagB.flagImageName = "pinB"
         flagB.flagControlledBy = "Red"
@@ -81,8 +81,8 @@ class TestFlagViewController: UIViewController {
         
         
         flagC.flagName = "Flag C"
-        flagC.lat = 35.439315
-        flagC.long = -88.638892
+        flagC.lat = 35.437303
+        flagC.long = -88.636797
         flagC.altitude = 140
         flagC.flagImageName = "pinC"
         flagC.flagControlledBy = "Red"
@@ -125,13 +125,12 @@ class TestFlagViewController: UIViewController {
         //view.addSubview(sceneLocationView)
         
         locationManager.delegate = self
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
+        locationManager.requestAlwaysAuthorization()
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.startUpdatingLocation()
-        
-        self.setUpGeofenceForFlagA()
-        self.setUpGeofenceForFlagB()
-        self.setUpGeofenceForFlagC()
+        addRegionA()
+        addRegionB()
+        addRegionC()
         
     }
     
@@ -173,29 +172,37 @@ class TestFlagViewController: UIViewController {
      // Pass the selected object to the new view controller.
      }
      */
-    func setUpGeofenceForFlagA() {
-        let geofenceRegionCenterFlagA = CLLocationCoordinate2DMake( flagA.lat!, flagA.long!);
-        let geofenceRegionFlagA = CLCircularRegion(center: geofenceRegionCenterFlagA, radius: flagA.flagRadius!, identifier: "Flag A");
-        //geofenceRegionFlagA.notifyOnExit = true;
-        //geofenceRegionFlagA.notifyOnEntry = true;
-        print("Flag A region generated.")
-        locationManager.startMonitoring(for: geofenceRegionFlagA)
+    func addRegionA() {
+        let coordinate = CLLocationCoordinate2DMake(flagA.lat!, flagA.long!)
+        let region = CLCircularRegion(center: coordinate, radius: 50, identifier: "geofence")
+        //mapView.removeOverlays(mapView.overlays)
+        locationManager.startMonitoring(for: region)
+        region.notifyOnEntry = true
+        region.notifyOnExit = true
+        //let circle = MKCircle(center: coordinate, radius: region.radius)
+        //mapView.add(circle)
     }
-    func setUpGeofenceForFlagB() {
-        let geofenceRegionCenterFlagB = CLLocationCoordinate2DMake(flagB.lat!, flagB.long!);
-        let geofenceRegionFlagB = CLCircularRegion(center: geofenceRegionCenterFlagB, radius: flagB.flagRadius!, identifier: "Flag B");
-        //geofenceRegionFlagB.notifyOnExit = true;
-        //geofenceRegionFlagB.notifyOnEntry = true;
-        print("Flag B region generated.")
-        locationManager.startMonitoring(for: geofenceRegionFlagB)
+    
+    func addRegionB() {
+        let coordinateB = CLLocationCoordinate2DMake(flagB.lat!, flagB.long!)
+        let regionB = CLCircularRegion(center: coordinateB, radius: 50, identifier: "geofenceB")
+        //mapView.removeOverlays(mapView.overlays)
+        locationManager.startMonitoring(for: regionB)
+        regionB.notifyOnEntry = true
+        regionB.notifyOnExit = true
+        //let circleB = MKCircle(center: coordinateB, radius: regionB.radius)
+        //mapView.add(circleB)
     }
-    func setUpGeofenceForFlagC() {
-        let geofenceRegionCenterFlagC = CLLocationCoordinate2DMake(flagC.lat!, flagC.long!);
-        let geofenceRegionFlagC = CLCircularRegion(center: geofenceRegionCenterFlagC, radius: flagC.flagRadius!, identifier: "Flag C");
-        //geofenceRegionFlagC.notifyOnExit = true;
-        //geofenceRegionFlagC.notifyOnEntry = true;
-        print("Flag C region generated.")
-        locationManager.startMonitoring(for: geofenceRegionFlagC)
+    
+    func addRegionC() {
+        let coordinateC = CLLocationCoordinate2DMake(flagC.lat!, flagC.long!)
+        let regionC = CLCircularRegion(center: coordinateC, radius: 50, identifier: "geofenceC")
+        //mapView.removeOverlays(mapView.overlays)
+        locationManager.startMonitoring(for: regionC)
+        regionC.notifyOnEntry = true
+        regionC.notifyOnExit = true
+        //let circleC = MKCircle(center: coordinateC, radius: regionC.radius)
+        //mapView.add(circleC)
     }
     
     func showAlert(title: String, message: String) {
@@ -213,11 +220,50 @@ extension TestFlagViewController: CLLocationManagerDelegate {
         
     }
     
-    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion){
-        showAlert(title: "Hello!", message: "Hello again!")
+    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+        if region.identifier == "geofence" {
+            let title = "You Entered the Flag A Region"
+            let message = "Capturing Flag A"
+            showAlert(title: title, message: message)
+            
+        }
+        else if region.identifier == "geofenceB" {
+            let title = "You Entered the Flag B region!"
+            let message = "Capturing Flag B"
+            showAlert(title: title, message: message)
+        }
+        
+        else if region.identifier == "geofenceC" {
+            let title = "You Entered the Flag C region!"
+            let message = "Capturing Flag C"
+            showAlert(title: title, message: message)
+        }
+        
+        print("\n")
+        print("**************************** ENTERED **********************")
+        print("\n")
     }
     
-    func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion){
-        showAlert(title: "Goodbye!", message: "Goodbye again!")
+    func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
+        if region.identifier == "geofence" {
+            let title = "You left the Flag A Region"
+            let message = "leaving Flag A"
+            showAlert(title: title, message: message)
+            
+        }
+        else if region.identifier == "geofenceB" {
+            let title = "You left the Flag B region!"
+            let message = "leaving Flag B"
+            showAlert(title: title, message: message)
+        }
+            
+        else if region.identifier == "geofenceC" {
+            let title = "You left the Flag C region!"
+            let message = "leaving Flag C"
+            showAlert(title: title, message: message)
+        }
+        print("\n")
+        print("**************************** EXITED **********************")
+        print("\n")
     }
 }
