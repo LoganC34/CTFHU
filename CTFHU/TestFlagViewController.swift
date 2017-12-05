@@ -12,11 +12,16 @@ import CoreLocation
 import MapKit
 import MKMagneticProgress
 
+protocol TestFlagDelegate {
+    func capturingFlag(captureValue: Int)
+}
 
 
 class TestFlagViewController: UIViewController {
     
     let sceneLocationView = SceneLocationView()
+    
+    var delegate: TestFlagDelegate?
     
     let mapView = MKMapView()
     var userAnnotation: MKPointAnnotation?
@@ -61,32 +66,32 @@ class TestFlagViewController: UIViewController {
         flagA.flagName = "Flag A"
         //flagA.lat = 35.440208
         //flagA.long = -88.636866
-        flagA.lat = 35.439060
-        flagA.long = -88.635680
+        flagA.lat = 35.440460
+        flagA.long = -88.638870
         flagA.altitude = 140
         flagA.flagImageName = "pinA"
         flagA.flagControlledBy = "Red"
-        flagA.flagRadius = 5.0
+        flagA.flagRadius = 40.0
         flagA.flagValue = 100
         
         
         flagB.flagName = "Flag B"
-        flagB.lat = 35.437750
-        flagB.long = -88.640306
+        flagB.lat = 35.440080
+        flagB.long = -88.637826
         flagB.altitude = 140
         flagB.flagImageName = "pinB"
         flagB.flagControlledBy = "Red"
-        flagB.flagRadius = 5.0
+        flagB.flagRadius = 20.0
         flagB.flagValue = 100
         
         
         flagC.flagName = "Flag C"
-        flagC.lat = 35.437303
-        flagC.long = -88.636797
+        flagC.lat = 35.439536
+        flagC.long = -88.639017
         flagC.altitude = 140
         flagC.flagImageName = "pinC"
         flagC.flagControlledBy = "Red"
-        flagC.flagRadius = 5.0
+        flagC.flagRadius = 30.0
         flagC.flagValue = 100
         
         
@@ -123,11 +128,29 @@ class TestFlagViewController: UIViewController {
         }
         
         //view.addSubview(sceneLocationView)
-        
         locationManager.delegate = self
         locationManager.requestAlwaysAuthorization()
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
         locationManager.startUpdatingLocation()
+        locationManager.activityType = .fitness
+        locationManager.distanceFilter = 5
+        locationManager.pausesLocationUpdatesAutomatically = false
+       
+        print("\n")
+        print(locationManager.location?.horizontalAccuracy)
+        print(locationManager.location?.verticalAccuracy)
+        print("\n")
+        
+        
+        //checkLocationTreshHold(manager: locationManager)
+        
+        sleep(1)
+        
+        print("\n")
+        print(locationManager.location?.horizontalAccuracy)
+        print(locationManager.location?.verticalAccuracy)
+        print("\n")
+        
         addRegionA()
         addRegionB()
         addRegionC()
@@ -172,9 +195,11 @@ class TestFlagViewController: UIViewController {
      // Pass the selected object to the new view controller.
      }
      */
+
+    
     func addRegionA() {
-        let coordinate = CLLocationCoordinate2DMake(flagA.lat!, flagA.long!)
-        let region = CLCircularRegion(center: coordinate, radius: 50, identifier: "geofence")
+        let coordinate = CLLocationCoordinate2D(latitude: flagA.lat!, longitude: flagA.long!)
+        let region = CLCircularRegion(center: coordinate, radius: flagA.flagRadius!, identifier: "geofence")
         //mapView.removeOverlays(mapView.overlays)
         locationManager.startMonitoring(for: region)
         region.notifyOnEntry = true
@@ -184,8 +209,8 @@ class TestFlagViewController: UIViewController {
     }
     
     func addRegionB() {
-        let coordinateB = CLLocationCoordinate2DMake(flagB.lat!, flagB.long!)
-        let regionB = CLCircularRegion(center: coordinateB, radius: 50, identifier: "geofenceB")
+        let coordinateB = CLLocationCoordinate2D(latitude: flagB.lat!,longitude:  flagB.long!)
+        let regionB = CLCircularRegion(center: coordinateB, radius: flagB.flagRadius!, identifier: "geofenceB")
         //mapView.removeOverlays(mapView.overlays)
         locationManager.startMonitoring(for: regionB)
         regionB.notifyOnEntry = true
@@ -195,8 +220,8 @@ class TestFlagViewController: UIViewController {
     }
     
     func addRegionC() {
-        let coordinateC = CLLocationCoordinate2DMake(flagC.lat!, flagC.long!)
-        let regionC = CLCircularRegion(center: coordinateC, radius: 50, identifier: "geofenceC")
+        let coordinateC = CLLocationCoordinate2D(latitude: flagC.lat!,longitude:  flagC.long!)
+        let regionC = CLCircularRegion(center: coordinateC, radius: flagC.flagRadius!, identifier: "geofenceC")
         //mapView.removeOverlays(mapView.overlays)
         locationManager.startMonitoring(for: regionC)
         regionC.notifyOnEntry = true
@@ -212,11 +237,22 @@ class TestFlagViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
+
+    
 }
 
 extension TestFlagViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         locationManager.stopUpdatingLocation()
+        
+        if locations.last!.horizontalAccuracy < 30 {
+            print (locations.last!.horizontalAccuracy)
+        }
+        else {
+
+            locationManager.startUpdatingLocation()
+            print (locations.last!.horizontalAccuracy)
+        }
         
     }
     
@@ -225,18 +261,21 @@ extension TestFlagViewController: CLLocationManagerDelegate {
             let title = "You Entered the Flag A Region"
             let message = "Capturing Flag A"
             showAlert(title: title, message: message)
+            delegate?.capturingFlag(captureValue: flagA.flagValue!)
             
         }
         else if region.identifier == "geofenceB" {
             let title = "You Entered the Flag B region!"
             let message = "Capturing Flag B"
             showAlert(title: title, message: message)
+            delegate?.capturingFlag(captureValue: flagB.flagValue!)
         }
         
         else if region.identifier == "geofenceC" {
             let title = "You Entered the Flag C region!"
             let message = "Capturing Flag C"
             showAlert(title: title, message: message)
+            delegate?.capturingFlag(captureValue: flagC.flagValue!)
         }
         
         print("\n")
@@ -251,13 +290,13 @@ extension TestFlagViewController: CLLocationManagerDelegate {
             showAlert(title: title, message: message)
             
         }
-        else if region.identifier == "geofenceB" {
+        if region.identifier == "geofenceB" {
             let title = "You left the Flag B region!"
             let message = "leaving Flag B"
             showAlert(title: title, message: message)
         }
             
-        else if region.identifier == "geofenceC" {
+        if region.identifier == "geofenceC" {
             let title = "You left the Flag C region!"
             let message = "leaving Flag C"
             showAlert(title: title, message: message)

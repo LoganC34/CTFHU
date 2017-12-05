@@ -10,17 +10,15 @@ import UIKit
 import CoreGraphics
 import MKMagneticProgress
 
-
-class CaptureBarViewController: UIViewController {
+class CaptureBarViewController: UIViewController, TestFlagDelegate {
 
     @IBOutlet weak var magProgress: MKMagneticProgress!
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         
-         magProgress.setProgress(progress: CGFloat(0.4))
+         magProgress.setProgress(progress: CGFloat(0.0))
          magProgress.progressShapeColor = UIColor.blue
          magProgress.backgroundShapeColor = UIColor.black
          magProgress.titleColor = UIColor.blue
@@ -41,6 +39,10 @@ class CaptureBarViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func capturingFlag(captureValue: Int) {
+        let percentOfCapture = captureValue / 100
+        magProgress.setProgress(progress: CGFloat(percentOfCapture))
+    }
 
     /*
     // MARK: - Navigation

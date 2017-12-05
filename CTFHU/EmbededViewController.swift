@@ -9,11 +9,10 @@
 import UIKit
 import MKMagneticProgress
 
+
 class EmbededViewController: UIViewController {
 
-    
-    
-    
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         
