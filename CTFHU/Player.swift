@@ -10,13 +10,15 @@ import Foundation
 
 public class Player {
     var playerName = String()
-    var teamName = Int()
+    var teamName = String()
+    var imageName = String()
     weak var team:Team?
     
-    convenience init (playerName: String) {
+    convenience init (playerName: String, imageName: String) {
         self.init()
         self.playerName = playerName
         //self.teamName = teamName
+        self.imageName = imageName
         
     }
 
