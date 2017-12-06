@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -61,7 +61,7 @@
                         <color key="backgroundColor" red="0.92157250642776489" green="0.91768878698348999" blue="0.91749095916748047" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Game" image="Play" selectedImage="controller" id="MGS-Ic-WV6"/>
+                    <tabBarItem key="tabBarItem" title="Game" image="controller" selectedImage="controller" id="MGS-Ic-WV6"/>
                     <navigationItem key="navigationItem" title="Current Game" id="V8U-XD-FCc"/>
                     <connections>
                         <outlet property="arButton" destination="I10-yv-PH7" id="m25-67-HyA"/>
@@ -529,7 +529,6 @@
     </scenes>
     <resources>
         <image name="Leaderboard" width="25" height="25"/>
-        <image name="Play" width="25" height="25"/>
         <image name="Profile" width="25" height="25"/>
         <image name="Team" width="25" height="25"/>
         <image name="controller" width="25" height="25"/>

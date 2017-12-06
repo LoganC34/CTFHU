@@ -51,11 +51,11 @@ class TestFlagViewController: UIViewController, DataSentDelegate {
     @IBOutlet weak var flagSeer: ARSCNView!
     @IBOutlet weak var sceneView: ARSCNView!
     
-    var flagA = Flag()
-    var flagB = Flag()
-    var flagC = Flag()
-    
     var data = CaptureBarViewController()
+    
+    var flagA = FlagDataSet.flagA
+    var flagB = FlagDataSet.flagB
+    var flagC = FlagDataSet.flagC
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,7 +66,7 @@ class TestFlagViewController: UIViewController, DataSentDelegate {
         view.addSubview(sceneLocationView)
         // Do any additional setup after loading the view.
         
-        
+
         
         flagA.flagName = "Flag A"
         //flagA.lat = 35.440208
@@ -132,9 +132,7 @@ class TestFlagViewController: UIViewController, DataSentDelegate {
         addPinToScreen(latitude: flagB.lat!, longitude: flagB.long!, altitude: flagB.altitude!, ImageName: flagB.flagImageName!)
         addPinToScreen(latitude: flagC.lat!, longitude: flagC.long!, altitude: flagC.altitude!, ImageName: flagC.flagImageName!)
         
-        removePinFromScreen(latitude: flagB.lat!, longitude: flagB.long!, altitude: flagB.altitude!, ImageName: flagB.flagImageName!)
 
-        //removePinFromScreen(latitude: flagB.lat!, longitude: flagB.long!, altitude: flagB.altitude!, ImageName: flagB.flagImageName!)
         
         if displayDebugging {
             sceneLocationView.showFeaturePoints = true
@@ -150,12 +148,10 @@ class TestFlagViewController: UIViewController, DataSentDelegate {
         locationManager.distanceFilter = 5
         locationManager.pausesLocationUpdatesAutomatically = false
        
-        print("\n")
+        /*print("\n")
         print(locationManager.location?.horizontalAccuracy)
         print(locationManager.location?.verticalAccuracy)
         print("\n")
-
-        sleep(1)
         
         print("\n")
         print(locationManager.location?.horizontalAccuracy)
@@ -164,7 +160,7 @@ class TestFlagViewController: UIViewController, DataSentDelegate {
         
         addRegionA()
         addRegionB()
-        addRegionC()
+        addRegionC()*/
         
     }
     
@@ -183,16 +179,13 @@ class TestFlagViewController: UIViewController, DataSentDelegate {
         
     }
     
-    func removePinFromScreen(latitude: Double, longitude: Double, altitude: Double, ImageName: String) {
+    func removePinFromScreen(latitude: Double, longitude: Double, altitude: Double, imageName: String) {
         let coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
         let location = CLLocation(coordinate: coordinate, altitude: altitude)
-        let image = UIImage(named: ImageName)!
+        let image = UIImage(named: imageName)!
         
         let annotationNode = LocationAnnotationNode(location: location, image: image)
-        //sceneLocationView.addLocationNodeWithConfirmedLocation(locationNode: annotationNode)
-        sceneLocationView.removeLocationNode(locationNode: annotationNode)
-        annotationNode.scaleRelativeToDistance = true
-        sceneLocationView.removeFromSuperview()
+        
     }
     
     override func viewDidLayoutSubviews() {
@@ -236,7 +229,7 @@ class TestFlagViewController: UIViewController, DataSentDelegate {
      }
      */
 
-    
+    /*
     func addRegionA() {
         let coordinate = CLLocationCoordinate2D(latitude: flagA.lat!, longitude: flagA.long!)
         let region = CLCircularRegion(center: coordinate, radius: flagA.flagRadius!, identifier: "geofence")
@@ -268,7 +261,7 @@ class TestFlagViewController: UIViewController, DataSentDelegate {
         regionC.notifyOnExit = true
         //let circleC = MKCircle(center: coordinateC, radius: regionC.radius)
         //mapView.add(circleC)
-    }
+    }*/
     
     func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -288,6 +281,7 @@ class TestFlagViewController: UIViewController, DataSentDelegate {
             print("im in the if statement")
             print("\n")
         }
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

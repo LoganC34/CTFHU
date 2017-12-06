@@ -19,6 +19,7 @@ class ProfileViewController: UIViewController {
         TeamDataSet.currentPlayer.imageName = "Player"
         TeamDataSet.currentPlayer.playerName = "Cool User 123"
         TeamDataSet.currentPlayer.teamName = "Blue Team"
+        //callFunc()
         
         playerAvatar.image = UIImage(named: TeamDataSet.currentPlayer.imageName)
         playerName.text = TeamDataSet.currentPlayer.playerName
@@ -30,6 +31,10 @@ class ProfileViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func callFunc() {
+        TeamDataSet.currentPlayer.teamName = "Green Team"
     }
     
 

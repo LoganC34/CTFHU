@@ -37,6 +37,7 @@
 		027DA7B31FBD6935009EBB22 /* PlayerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DA7B21FBD6935009EBB22 /* PlayerTableViewController.swift */; };
 		027DA7B51FBD6984009EBB22 /* PlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DA7B41FBD6984009EBB22 /* PlayerTableViewCell.swift */; };
 		029541E51FBCE5D000DD3659 /* Dataset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029541E41FBCE5D000DD3659 /* Dataset.swift */; };
+		029F17AA1FD892C0003521EF /* FlagDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F17A91FD892C0003521EF /* FlagDataSet.swift */; };
 		02BDA07F1FCF557A00249159 /* Flag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BDA07E1FCF557A00249159 /* Flag.swift */; };
 		02BDA0811FCF5C5300249159 /* TeamDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BDA0801FCF5C5300249159 /* TeamDataSet.swift */; };
 		02BDA0831FCF6A9E00249159 /* FlagLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BDA0821FCF6A9E00249159 /* FlagLocations.swift */; };
@@ -80,6 +81,7 @@
 		027DA7B21FBD6935009EBB22 /* PlayerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTableViewController.swift; sourceTree = "<group>"; };
 		027DA7B41FBD6984009EBB22 /* PlayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTableViewCell.swift; sourceTree = "<group>"; };
 		029541E41FBCE5D000DD3659 /* Dataset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dataset.swift; sourceTree = "<group>"; };
+		029F17A91FD892C0003521EF /* FlagDataSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagDataSet.swift; sourceTree = "<group>"; };
 		02BDA07E1FCF557A00249159 /* Flag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flag.swift; sourceTree = "<group>"; };
 		02BDA0801FCF5C5300249159 /* TeamDataSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDataSet.swift; sourceTree = "<group>"; };
 		02BDA0821FCF6A9E00249159 /* FlagLocations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagLocations.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				029541E41FBCE5D000DD3659 /* Dataset.swift */,
 				02E69EC21FAEF685000F9A3D /* EmbededViewController.swift */,
 				02BDA07E1FCF557A00249159 /* Flag.swift */,
+				029F17A91FD892C0003521EF /* FlagDataSet.swift */,
 				02BDA0821FCF6A9E00249159 /* FlagLocations.swift */,
 				02E69EBE1FAEE29C000F9A3D /* LeaderboardViewController.swift */,
 				025D01431FBED05B000875BB /* LeaderboardTableViewCell.swift */,
@@ -345,6 +348,7 @@
 				022A2E421FBEDC170009062B /* SegueTeamPlayersTableViewController.swift in Sources */,
 				023C611C1FCF4AA90034CB43 /* Team.swift in Sources */,
 				027594B61FADA104007B6F34 /* FloatingPoint+Radians.swift in Sources */,
+				029F17AA1FD892C0003521EF /* FlagDataSet.swift in Sources */,
 				025D01441FBED05B000875BB /* LeaderboardTableViewCell.swift in Sources */,
 				0205246A1FAD853000200249 /* TeamViewController.swift in Sources */,
 				022A2E441FBEDC330009062B /* TeamPlayerNameTableViewCell.swift in Sources */,

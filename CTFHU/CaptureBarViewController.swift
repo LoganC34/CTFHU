@@ -24,16 +24,16 @@ class CaptureBarViewController: UIViewController {
         super.viewDidLoad()
         
         magProgress.setProgress(progress: CGFloat(0.0))
-        magProgress.progressShapeColor = UIColor.blue
+        magProgress.progressShapeColor = UIColor.cyan
         magProgress.backgroundShapeColor = UIColor.black
-        magProgress.titleColor = UIColor.blue
-        magProgress.percentColor = UIColor.black
+        magProgress.titleColor = UIColor.cyan
+        magProgress.percentColor = UIColor.cyan
         
         magProgress.lineWidth = 10
         magProgress.orientation = .bottom
         magProgress.lineCap = .round
         
-        magProgress.title = "Title"
+        magProgress.title = "Flag A"
         magProgress.percentLabelFormat = "%.2f%%"
         
         // Do any additional setup after loading the view.
