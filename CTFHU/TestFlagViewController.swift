@@ -12,17 +12,17 @@ import CoreLocation
 import MapKit
 import MKMagneticProgress
 
-protocol TestFlagDelegate {
-    func capturingFlag(captureValue: Int)
-}
+//protocol TestFlagDelegate {
+  //  func capturingFlag(captureValue: Int)
+//}
 
 
-class TestFlagViewController: UIViewController {
+
+class TestFlagViewController: UIViewController, DataSentDelegate {
     
     let sceneLocationView = SceneLocationView()
-    
-    var delegate: TestFlagDelegate?
-    
+    //var delegate: TestFlagDelegate?
+
     let mapView = MKMapView()
     var userAnnotation: MKPointAnnotation?
     var locationEstimateAnnotation: MKPointAnnotation?
@@ -55,46 +55,52 @@ class TestFlagViewController: UIViewController {
     var flagB = Flag()
     var flagC = Flag()
     
+    var data = CaptureBarViewController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         
         sceneLocationView.run()
         view.addSubview(sceneLocationView)
         // Do any additional setup after loading the view.
         
         
+        
         flagA.flagName = "Flag A"
         //flagA.lat = 35.440208
         //flagA.long = -88.636866
-        flagA.lat = 35.440460
-        flagA.long = -88.638870
+        flagA.lat = 35.438793
+        flagA.long = -88.634345
         flagA.altitude = 140
         flagA.flagImageName = "pinA"
         flagA.flagControlledBy = "Red"
-        flagA.flagRadius = 40.0
+        flagA.flagRadius = 5.0
         flagA.flagValue = 100
         
         
         flagB.flagName = "Flag B"
-        flagB.lat = 35.440080
-        flagB.long = -88.637826
+        flagB.lat = 35.440462
+        flagB.long = -88.638821
         flagB.altitude = 140
         flagB.flagImageName = "pinB"
         flagB.flagControlledBy = "Red"
-        flagB.flagRadius = 20.0
+        flagB.flagRadius = 5.0
         flagB.flagValue = 100
         
         
         flagC.flagName = "Flag C"
-        flagC.lat = 35.439536
-        flagC.long = -88.639017
+        flagC.lat = 35.437711
+        flagC.long = -88.639761
         flagC.altitude = 140
         flagC.flagImageName = "pinC"
         flagC.flagControlledBy = "Red"
-        flagC.flagRadius = 30.0
+        flagC.flagRadius = 5.0
         flagC.flagValue = 100
         
         
+        /*
         let coordinate = CLLocationCoordinate2D(latitude: flagA.lat!, longitude: flagA.long!)
         let location = CLLocation(coordinate: coordinate, altitude: flagA.altitude!)
         let image = UIImage(named: flagA.flagImageName!)!
@@ -120,7 +126,15 @@ class TestFlagViewController: UIViewController {
         let annotationNodeC = LocationAnnotationNode(location: locationC, image: imageC)
         sceneLocationView.addLocationNodeWithConfirmedLocation(locationNode: annotationNodeC)
         annotationNodeC.scaleRelativeToDistance = true
-        view.addSubview(sceneLocationView)
+        view.addSubview(sceneLocationView)*/
+        
+        addPinToScreen(latitude: flagA.lat!, longitude: flagA.long!, altitude: flagA.altitude!, ImageName: flagA.flagImageName!)
+        addPinToScreen(latitude: flagB.lat!, longitude: flagB.long!, altitude: flagB.altitude!, ImageName: flagB.flagImageName!)
+        addPinToScreen(latitude: flagC.lat!, longitude: flagC.long!, altitude: flagC.altitude!, ImageName: flagC.flagImageName!)
+        
+        removePinFromScreen(latitude: flagB.lat!, longitude: flagB.long!, altitude: flagB.altitude!, ImageName: flagB.flagImageName!)
+
+        //removePinFromScreen(latitude: flagB.lat!, longitude: flagB.long!, altitude: flagB.altitude!, ImageName: flagB.flagImageName!)
         
         if displayDebugging {
             sceneLocationView.showFeaturePoints = true
@@ -140,10 +154,7 @@ class TestFlagViewController: UIViewController {
         print(locationManager.location?.horizontalAccuracy)
         print(locationManager.location?.verticalAccuracy)
         print("\n")
-        
-        
-        //checkLocationTreshHold(manager: locationManager)
-        
+
         sleep(1)
         
         print("\n")
@@ -155,6 +166,33 @@ class TestFlagViewController: UIViewController {
         addRegionB()
         addRegionC()
         
+    }
+    
+    
+    
+    
+    func addPinToScreen(latitude: Double, longitude: Double, altitude: Double, ImageName: String) {
+        let coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        let location = CLLocation(coordinate: coordinate, altitude: altitude)
+        let image = UIImage(named: ImageName)!
+        
+        let annotationNode = LocationAnnotationNode(location: location, image: image)
+        sceneLocationView.addLocationNodeWithConfirmedLocation(locationNode: annotationNode)
+        annotationNode.scaleRelativeToDistance = true
+        view.addSubview(sceneLocationView)
+        
+    }
+    
+    func removePinFromScreen(latitude: Double, longitude: Double, altitude: Double, ImageName: String) {
+        let coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        let location = CLLocation(coordinate: coordinate, altitude: altitude)
+        let image = UIImage(named: ImageName)!
+        
+        let annotationNode = LocationAnnotationNode(location: location, image: image)
+        //sceneLocationView.addLocationNodeWithConfirmedLocation(locationNode: annotationNode)
+        sceneLocationView.removeLocationNode(locationNode: annotationNode)
+        annotationNode.scaleRelativeToDistance = true
+        sceneLocationView.removeFromSuperview()
     }
     
     override func viewDidLayoutSubviews() {
@@ -184,6 +222,8 @@ class TestFlagViewController: UIViewController {
         self.tabBarController?.tabBar.isHidden = false
         sceneLocationView.pause()
     }
+    
+    
     
     @IBOutlet weak var topBar: UIView!
     @IBOutlet weak var bottomBar: UIView!
@@ -237,14 +277,33 @@ class TestFlagViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
-
+    func userCapturedFlag(flagImage: String) {
+        print("\n")
+        print("im before the if statement")
+        print("\n")
+        if flagImage == "bluePinA" {
+            flagA.flagImageName = "bluePinA"
+            addPinToScreen(latitude: flagA.lat!, longitude: flagA.long!, altitude: flagA.altitude!, ImageName: flagA.flagImageName!)
+            print("\n")
+            print("im in the if statement")
+            print("\n")
+        }
+    }
     
-}
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "captureBar" {
+            let captureBarVC: CaptureBarViewController = segue.destination as! CaptureBarViewController
+            captureBarVC.delegate = self
+        }
+    }
+    
+
+    }
 
 extension TestFlagViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         locationManager.stopUpdatingLocation()
-        
+        /*
         if locations.last!.horizontalAccuracy < 30 {
             print (locations.last!.horizontalAccuracy)
         }
@@ -253,29 +312,29 @@ extension TestFlagViewController: CLLocationManagerDelegate {
             locationManager.startUpdatingLocation()
             print (locations.last!.horizontalAccuracy)
         }
-        
+        */
     }
     
-    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion, locations:[CLLocation]) {
         if region.identifier == "geofence" {
             let title = "You Entered the Flag A Region"
             let message = "Capturing Flag A"
             showAlert(title: title, message: message)
-            delegate?.capturingFlag(captureValue: flagA.flagValue!)
+            //delegate?.capturingFlag(captureValue: flagA.flagValue!)
             
         }
         else if region.identifier == "geofenceB" {
             let title = "You Entered the Flag B region!"
             let message = "Capturing Flag B"
             showAlert(title: title, message: message)
-            delegate?.capturingFlag(captureValue: flagB.flagValue!)
+            //delegate?.capturingFlag(captureValue: flagB.flagValue!)
         }
         
         else if region.identifier == "geofenceC" {
             let title = "You Entered the Flag C region!"
             let message = "Capturing Flag C"
             showAlert(title: title, message: message)
-            delegate?.capturingFlag(captureValue: flagC.flagValue!)
+            //delegate?.capturingFlag(captureValue: flagC.flagValue!)
         }
         
         print("\n")
@@ -306,3 +365,4 @@ extension TestFlagViewController: CLLocationManagerDelegate {
         print("\n")
     }
 }
+

@@ -10,48 +10,63 @@ import UIKit
 import CoreGraphics
 import MKMagneticProgress
 
-class CaptureBarViewController: UIViewController, TestFlagDelegate {
+protocol DataSentDelegate {
+    func userCapturedFlag(flagImage: String)
+}
 
+class CaptureBarViewController: UIViewController {
+    
     @IBOutlet weak var magProgress: MKMagneticProgress!
-
+    
+    var delegate: DataSentDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
-         magProgress.setProgress(progress: CGFloat(0.0))
-         magProgress.progressShapeColor = UIColor.blue
-         magProgress.backgroundShapeColor = UIColor.black
-         magProgress.titleColor = UIColor.blue
-         magProgress.percentColor = UIColor.black
-         
-         magProgress.lineWidth = 10
-         magProgress.orientation = .bottom
-         magProgress.lineCap = .round
-         
-         magProgress.title = "Title"
-         magProgress.percentLabelFormat = "%.2f%%"
+        magProgress.setProgress(progress: CGFloat(0.0))
+        magProgress.progressShapeColor = UIColor.blue
+        magProgress.backgroundShapeColor = UIColor.black
+        magProgress.titleColor = UIColor.blue
+        magProgress.percentColor = UIColor.black
+        
+        magProgress.lineWidth = 10
+        magProgress.orientation = .bottom
+        magProgress.lineCap = .round
+        
+        magProgress.title = "Title"
+        magProgress.percentLabelFormat = "%.2f%%"
         
         // Do any additional setup after loading the view.
     }
-
+    
+    @IBAction func captureFlag(_ sender: UIButton) {
+        var i = 0.0
+        while i <= 1.0 {
+            magProgress.setProgress(progress: CGFloat(i), animated: true)
+            i = i + 0.1
+        }
+        print("\n")
+        print("hello")
+        print("\n")
+        delegate?.userCapturedFlag(flagImage: "bluePinA")
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    func capturingFlag(captureValue: Int) {
-        let percentOfCapture = captureValue / 100
-        magProgress.setProgress(progress: CGFloat(percentOfCapture))
-    }
-
+    
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
+
