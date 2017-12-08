@@ -7,17 +7,51 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		273A2751EF07ADEB984A12AF992736DE /* MKMagneticProgress-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B297F9362C128867D1E13FE11C1E8504 /* MKMagneticProgress-dummy.m */; };
-		4DBB9969A1AFD99059F03666CD9A7C7C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		8BFFE5DD1612E296ECB0272C4D3828B9 /* Pods-CTFHU-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 753B209D824B521D4A5D888A9C0227DD /* Pods-CTFHU-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B7BFF052FFFB5D5F6E241C6C8A0D7158 /* Pods-CTFHU-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 292FD9B24B33A4C5E49595791258359E /* Pods-CTFHU-dummy.m */; };
-		C5B3C5796438230B0F9210566BB65D3F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		C9E59AF95C6247BCA123BF1626F8C583 /* MKMagneticProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2328013DDC418D0427470DE9D429FADA /* MKMagneticProgress.swift */; };
-		EC369627AB23217B101FA0E7282B5344 /* MKMagneticProgress-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D23897CAC644D263A39480DA175C7695 /* MKMagneticProgress-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04B3444EFD7E1108F7B9543E015C8D11 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5224A726D9EABB2D5F18E4597390EF3 /* UIKit.framework */; };
+		0523B7C8A63DA42128DD53158BE63E20 /* PieSlice.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC20107F5C603B0479993CA7B8A3B1F8 /* PieSlice.swift */; };
+		092080F1DF547E2BA5961DE79832BAAA /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7686CBAB9D1043A47B24C66481B00767 /* Int.swift */; };
+		0AA81CDBF93F9CDF97456CF73BAFF2B9 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77047C2A0B274F90C250905A8E1E01A /* Globals.swift */; };
+		0B34B29DCFF24310DB6096F431D05AB8 /* FloatingPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA48C1035F16EB2D2442F298DF4D33E /* FloatingPoint.swift */; };
+		19D0891D8DF0929968FED7E011FDB992 /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8010D2BF5DA76223BF28EBD3D5915B /* CGPoint.swift */; };
+		1FF0667D8F3FAFB413043E19780518A9 /* CGRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86613C1C6993E0CC02CBBBE6DDD3BAAE /* CGRect.swift */; };
+		273A2751EF07ADEB984A12AF992736DE /* MKMagneticProgress-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 45DCCF2958742199886BDCEE956ECCE6 /* MKMagneticProgress-dummy.m */; };
+		27CD5ACBCEE0915A06D6A80CABE89D22 /* PieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D3A76F1E75E19BF1BC2C943549115B /* PieChart.swift */; };
+		34CAB7F31908ECC2AEB99EA6826049B3 /* PieCharts-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 34327E71027B137536DAA46DF2A21F61 /* PieCharts-dummy.m */; };
+		47B802EA7118B37614CEC5251CF04D89 /* Pods-CTFHU-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 292FD9B24B33A4C5E49595791258359E /* Pods-CTFHU-dummy.m */; };
+		4D623ECDD6171CFBDABA6D3589EEBF45 /* CGSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6987AB7E536EE526AC7D6DBAF9DD62E0 /* CGSize.swift */; };
+		4DBB9969A1AFD99059F03666CD9A7C7C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE59B0D97841C2542CA3D20540685C26 /* Foundation.framework */; };
+		4DF34483354278BD1EA63A3CC7A50CFA /* PieSliceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EDAA2A13FAB7415DEA19966BAAEAEC /* PieSliceDelegate.swift */; };
+		52FEC469DC1B6E386AAA842598CD19BA /* PieCharts-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 78607F9E230B69547BFA31E04E3B3D24 /* PieCharts-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		53B45AB9FBE5CD4BCC4639C2DC907EEB /* PieSliceLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E93A4635DB5C606DB02D4A92C245AF1 /* PieSliceLayer.swift */; };
+		6CA761451B45C8297D78282043DABCE4 /* PieCustomViewsLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F200151AAD1A35C87A3396256AAC2314 /* PieCustomViewsLayer.swift */; };
+		71580FC51C63278A41557A72C12A8069 /* Pods-CTFHU-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 753B209D824B521D4A5D888A9C0227DD /* Pods-CTFHU-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		847BAD9822C05029A78ED83F6F5D92A6 /* PieSliceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871781FE58F78DB7CF70891CE8245CBA /* PieSliceModel.swift */; };
+		8B3FBEC1B31193573F0D1C3BF7D8E754 /* AlphaPieLineTextLayerAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE8F63F7C6CECF38F64801114C51A17 /* AlphaPieLineTextLayerAnimator.swift */; };
+		9B911F10D15C39D49321D4D7762DD056 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE59B0D97841C2542CA3D20540685C26 /* Foundation.framework */; };
+		A1EF267D6DEDBC911FDC5C8DC34211D4 /* PieViewLayerAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517BEBAB1954BF3B9660930728ABE556 /* PieViewLayerAnimator.swift */; };
+		A886C3EBF285F2B4A7D2A7EB15DC3BD5 /* PieLineTextLayerAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B857DB1D019CA6EAA027500C40637D2 /* PieLineTextLayerAnimator.swift */; };
+		B816D05421F1C3A224B1E49383AEAF18 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99C06B1B209CA23EC16EBF65CF890313 /* CoreGraphics.framework */; };
+		C9E59AF95C6247BCA123BF1626F8C583 /* MKMagneticProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A07E04C9F445119B805158E5702484D /* MKMagneticProgress.swift */; };
+		CDD5A94AB041BC9ED367E5123254B352 /* PieChartLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE69498849A6F0C13925C552ADB36D1 /* PieChartLayer.swift */; };
+		CE4A28B70185589B97A52C2375F224E1 /* PieChartDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC736453391F94E8DD9F37E824530FC8 /* PieChartDelegate.swift */; };
+		E1D62C5AE853D475FBEB562A105BDDA7 /* PiePlainTextLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5B9D8B9B34BF753889F578D815EF69 /* PiePlainTextLayer.swift */; };
+		E467687A4A8A981F5293BECDBCDADC74 /* PieSliceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EC3CCE2D69490A82468900A1BA7B17 /* PieSliceData.swift */; };
+		E87438828DF8DD13F06F0B969C55B045 /* AlphaPieViewLayerAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481F4BF3D15E187573A86EE7B2FFDF9F /* AlphaPieViewLayerAnimator.swift */; };
+		EC369627AB23217B101FA0E7282B5344 /* MKMagneticProgress-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D771D37E3280803355E6D7359A360C /* MKMagneticProgress-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC7E3714F37C66B42D016F831C0B4F69 /* PieChartLabelSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80737D87BBF0254E5A49A2705AFF6853 /* PieChartLabelSettings.swift */; };
+		F678B06EBFCA45F7423A5627B5A85F4C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE59B0D97841C2542CA3D20540685C26 /* Foundation.framework */; };
+		FDDB8D65F603EDAFADBA538D28EA7B75 /* PieLineTextLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38765168D44DB6166CC2F5B6E9E0080B /* PieLineTextLayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		58FBD19D686F0972108003353A876E20 /* PBXContainerItemProxy */ = {
+		78D83B0F56957A9C49B8B4FED63D4A94 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5E4B9D023702B55BE61C5C148DF100EA;
+			remoteInfo = PieCharts;
+		};
+		9F607A0F2485BE304D84302B0BA8C8CA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -27,27 +61,58 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		19429ADCCA51032E70DBCED1D5F27061 /* Pods_CTFHU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CTFHU.framework; path = "Pods-CTFHU.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2328013DDC418D0427470DE9D429FADA /* MKMagneticProgress.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MKMagneticProgress.swift; path = MKMagneticProgress/Classes/MKMagneticProgress.swift; sourceTree = "<group>"; };
+		0D8010D2BF5DA76223BF28EBD3D5915B /* CGPoint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGPoint.swift; path = PieCharts/Extensions/CGPoint.swift; sourceTree = "<group>"; };
+		0E0DAFD3A83593369CDA162CE676D445 /* PieCharts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PieCharts.framework; path = PieCharts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		19649815C78A4DE4EEFF2571ED233692 /* PieCharts.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = PieCharts.modulemap; sourceTree = "<group>"; };
+		1E5B9D8B9B34BF753889F578D815EF69 /* PiePlainTextLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PiePlainTextLayer.swift; path = PieCharts/Layer/Impl/PlainText/PiePlainTextLayer.swift; sourceTree = "<group>"; };
+		26EDAA2A13FAB7415DEA19966BAAEAEC /* PieSliceDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PieSliceDelegate.swift; path = PieCharts/Core/Slice/PieSliceDelegate.swift; sourceTree = "<group>"; };
 		292FD9B24B33A4C5E49595791258359E /* Pods-CTFHU-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CTFHU-dummy.m"; sourceTree = "<group>"; };
-		5A7C26AD2E20D8F72782ABA83AA1F018 /* MKMagneticProgress.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = MKMagneticProgress.modulemap; sourceTree = "<group>"; };
-		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		34327E71027B137536DAA46DF2A21F61 /* PieCharts-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PieCharts-dummy.m"; sourceTree = "<group>"; };
+		38765168D44DB6166CC2F5B6E9E0080B /* PieLineTextLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PieLineTextLayer.swift; path = PieCharts/Layer/Impl/LineText/PieLineTextLayer.swift; sourceTree = "<group>"; };
+		45DCCF2958742199886BDCEE956ECCE6 /* MKMagneticProgress-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MKMagneticProgress-dummy.m"; sourceTree = "<group>"; };
+		481F4BF3D15E187573A86EE7B2FFDF9F /* AlphaPieViewLayerAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AlphaPieViewLayerAnimator.swift; path = PieCharts/Layer/Impl/View/Anim/AlphaPieViewLayerAnimator.swift; sourceTree = "<group>"; };
+		4FE8F63F7C6CECF38F64801114C51A17 /* AlphaPieLineTextLayerAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AlphaPieLineTextLayerAnimator.swift; path = PieCharts/Layer/Impl/LineText/Anim/AlphaPieLineTextLayerAnimator.swift; sourceTree = "<group>"; };
+		517BEBAB1954BF3B9660930728ABE556 /* PieViewLayerAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PieViewLayerAnimator.swift; path = PieCharts/Layer/Impl/View/Anim/PieViewLayerAnimator.swift; sourceTree = "<group>"; };
+		55D3A76F1E75E19BF1BC2C943549115B /* PieChart.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PieChart.swift; path = PieCharts/Core/Chart/PieChart.swift; sourceTree = "<group>"; };
+		5A07E04C9F445119B805158E5702484D /* MKMagneticProgress.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MKMagneticProgress.swift; path = MKMagneticProgress/Classes/MKMagneticProgress.swift; sourceTree = "<group>"; };
+		5B857DB1D019CA6EAA027500C40637D2 /* PieLineTextLayerAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PieLineTextLayerAnimator.swift; path = PieCharts/Layer/Impl/LineText/Anim/PieLineTextLayerAnimator.swift; sourceTree = "<group>"; };
+		61D771D37E3280803355E6D7359A360C /* MKMagneticProgress-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MKMagneticProgress-umbrella.h"; sourceTree = "<group>"; };
+		6987AB7E536EE526AC7D6DBAF9DD62E0 /* CGSize.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGSize.swift; path = PieCharts/Extensions/CGSize.swift; sourceTree = "<group>"; };
 		73656B22A4B02068C25D094A384BC799 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		739892BD5BE952522C8E811F79C79BB6 /* PieCharts-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PieCharts-prefix.pch"; sourceTree = "<group>"; };
 		753B209D824B521D4A5D888A9C0227DD /* Pods-CTFHU-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CTFHU-umbrella.h"; sourceTree = "<group>"; };
+		7686CBAB9D1043A47B24C66481B00767 /* Int.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Int.swift; path = PieCharts/Extensions/Int.swift; sourceTree = "<group>"; };
+		78607F9E230B69547BFA31E04E3B3D24 /* PieCharts-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PieCharts-umbrella.h"; sourceTree = "<group>"; };
+		7BE69498849A6F0C13925C552ADB36D1 /* PieChartLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PieChartLayer.swift; path = PieCharts/Layer/PieChartLayer.swift; sourceTree = "<group>"; };
+		7D3C8B6FFFA593831C128012F05139BC /* MKMagneticProgress.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MKMagneticProgress.xcconfig; sourceTree = "<group>"; };
+		7F442BAB0D225B4459D2C5C953E49B3F /* MKMagneticProgress-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MKMagneticProgress-prefix.pch"; sourceTree = "<group>"; };
+		80737D87BBF0254E5A49A2705AFF6853 /* PieChartLabelSettings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PieChartLabelSettings.swift; path = PieCharts/Layer/Impl/Common/PieChartLabelSettings.swift; sourceTree = "<group>"; };
 		8144E659047030B00491E61242BD4012 /* Pods-CTFHU-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CTFHU-resources.sh"; sourceTree = "<group>"; };
-		8A39DD9023EED2EF6B05A65F733F8658 /* MKMagneticProgress.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MKMagneticProgress.xcconfig; sourceTree = "<group>"; };
+		8147B185BE1B0AE021E56C301E51A7B8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86613C1C6993E0CC02CBBBE6DDD3BAAE /* CGRect.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGRect.swift; path = PieCharts/Extensions/CGRect.swift; sourceTree = "<group>"; };
+		871781FE58F78DB7CF70891CE8245CBA /* PieSliceModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PieSliceModel.swift; path = PieCharts/Model/PieSliceModel.swift; sourceTree = "<group>"; };
 		8C0232126BF125CD4872E5BE29743AE1 /* Pods-CTFHU-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CTFHU-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8E93A4635DB5C606DB02D4A92C245AF1 /* PieSliceLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PieSliceLayer.swift; path = PieCharts/Core/Slice/PieSliceLayer.swift; sourceTree = "<group>"; };
 		8F21597EBBDC10266E3BC6D5EE2566C7 /* Pods-CTFHU-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CTFHU-acknowledgements.plist"; sourceTree = "<group>"; };
 		92A1DCB0F8B22611603AD94E31FE55B9 /* Pods-CTFHU-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CTFHU-frameworks.sh"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		AAEAACC2EFF64A3003AD86632CF8CD6D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B297F9362C128867D1E13FE11C1E8504 /* MKMagneticProgress-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MKMagneticProgress-dummy.m"; sourceTree = "<group>"; };
-		BB8720B541CE6C9D4CD81110CD8391C0 /* MKMagneticProgress-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MKMagneticProgress-prefix.pch"; sourceTree = "<group>"; };
+		99C06B1B209CA23EC16EBF65CF890313 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		9D38B495EA59A8416C001C9F04DDB4EE /* Pods_CTFHU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CTFHU.framework; path = "Pods-CTFHU.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0798A855293EFBDF0A304CAD9E2F010 /* MKMagneticProgress.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MKMagneticProgress.framework; path = MKMagneticProgress.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5224A726D9EABB2D5F18E4597390EF3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		B49B4D606C557DCE1C805D1C955C9BE6 /* PieCharts.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PieCharts.xcconfig; sourceTree = "<group>"; };
+		BC736453391F94E8DD9F37E824530FC8 /* PieChartDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PieChartDelegate.swift; path = PieCharts/Core/Chart/PieChartDelegate.swift; sourceTree = "<group>"; };
 		C1ABEEAED59185C260AC98C1EE892474 /* Pods-CTFHU.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-CTFHU.modulemap"; sourceTree = "<group>"; };
+		C22A3BD0CCBF2B66CDEAD451141341B7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC20107F5C603B0479993CA7B8A3B1F8 /* PieSlice.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PieSlice.swift; path = PieCharts/Core/Slice/PieSlice.swift; sourceTree = "<group>"; };
+		CE59B0D97841C2542CA3D20540685C26 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		D0775B8F0A56A1A4984F775CC2BED732 /* Pods-CTFHU.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CTFHU.debug.xcconfig"; sourceTree = "<group>"; };
-		D23897CAC644D263A39480DA175C7695 /* MKMagneticProgress-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MKMagneticProgress-umbrella.h"; sourceTree = "<group>"; };
+		D3EC3CCE2D69490A82468900A1BA7B17 /* PieSliceData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PieSliceData.swift; path = PieCharts/Model/PieSliceData.swift; sourceTree = "<group>"; };
+		D77047C2A0B274F90C250905A8E1E01A /* Globals.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Globals.swift; path = PieCharts/Util/Globals.swift; sourceTree = "<group>"; };
 		E042665550EA338C82A825463042E7A3 /* Pods-CTFHU.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CTFHU.release.xcconfig"; sourceTree = "<group>"; };
-		FCCF50EA81818C731F01860B17421EA4 /* MKMagneticProgress.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MKMagneticProgress.framework; path = MKMagneticProgress.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB35957FEA5D5A7883E398E0E95C62E8 /* MKMagneticProgress.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = MKMagneticProgress.modulemap; sourceTree = "<group>"; };
+		EDA48C1035F16EB2D2442F298DF4D33E /* FloatingPoint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatingPoint.swift; path = PieCharts/Extensions/FloatingPoint.swift; sourceTree = "<group>"; };
+		F200151AAD1A35C87A3396256AAC2314 /* PieCustomViewsLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PieCustomViewsLayer.swift; path = PieCharts/Layer/Impl/View/PieCustomViewsLayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,34 +124,43 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5B06F6D6B748DD7DC691523283782756 /* Frameworks */ = {
+		94D419E2C236ED0B473742C2D02902B2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5B3C5796438230B0F9210566BB65D3F /* Foundation.framework in Frameworks */,
+				9B911F10D15C39D49321D4D7762DD056 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3A9331E7094391BD25AE6ECDD88E7CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B816D05421F1C3A224B1E49383AEAF18 /* CoreGraphics.framework in Frameworks */,
+				F678B06EBFCA45F7423A5627B5A85F4C /* Foundation.framework in Frameworks */,
+				04B3444EFD7E1108F7B9543E015C8D11 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		30F75B1EF1F4C0A14B000F8AA33163EC /* Products */ = {
+		1056310A671A9A93E0200EBD8ED619BE /* MKMagneticProgress */ = {
 			isa = PBXGroup;
 			children = (
-				FCCF50EA81818C731F01860B17421EA4 /* MKMagneticProgress.framework */,
-				19429ADCCA51032E70DBCED1D5F27061 /* Pods_CTFHU.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		31476AA8C8240D390177E4FDC2632A7C /* MKMagneticProgress */ = {
-			isa = PBXGroup;
-			children = (
-				2328013DDC418D0427470DE9D429FADA /* MKMagneticProgress.swift */,
-				55C580108A223877729C7806B63A92E5 /* Support Files */,
+				5A07E04C9F445119B805158E5702484D /* MKMagneticProgress.swift */,
+				9B61E12CFD183046B06199FEACC5B6ED /* Support Files */,
 			);
 			name = MKMagneticProgress;
 			path = MKMagneticProgress;
+			sourceTree = "<group>";
+		};
+		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				93FD095B5FC2A2BCC81B8E3CFC167E67 /* iOS */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		36E851BA37635A8BE04A832C840E9123 /* Pods-CTFHU */ = {
@@ -107,6 +181,20 @@
 			path = "Target Support Files/Pods-CTFHU";
 			sourceTree = "<group>";
 		};
+		39759E32922AD2CB674BC5D4F40E2744 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C22A3BD0CCBF2B66CDEAD451141341B7 /* Info.plist */,
+				19649815C78A4DE4EEFF2571ED233692 /* PieCharts.modulemap */,
+				B49B4D606C557DCE1C805D1C955C9BE6 /* PieCharts.xcconfig */,
+				34327E71027B137536DAA46DF2A21F61 /* PieCharts-dummy.m */,
+				739892BD5BE952522C8E811F79C79BB6 /* PieCharts-prefix.pch */,
+				78607F9E230B69547BFA31E04E3B3D24 /* PieCharts-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PieCharts";
+			sourceTree = "<group>";
+		};
 		4AB38959F20E7C5F65FAEFC0881572DC /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,63 +203,107 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		55C580108A223877729C7806B63A92E5 /* Support Files */ = {
+		7C0494AF1A58A0F36136B71DD4EF8B22 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AAEAACC2EFF64A3003AD86632CF8CD6D /* Info.plist */,
-				5A7C26AD2E20D8F72782ABA83AA1F018 /* MKMagneticProgress.modulemap */,
-				8A39DD9023EED2EF6B05A65F733F8658 /* MKMagneticProgress.xcconfig */,
-				B297F9362C128867D1E13FE11C1E8504 /* MKMagneticProgress-dummy.m */,
-				BB8720B541CE6C9D4CD81110CD8391C0 /* MKMagneticProgress-prefix.pch */,
-				D23897CAC644D263A39480DA175C7695 /* MKMagneticProgress-umbrella.h */,
+				A0798A855293EFBDF0A304CAD9E2F010 /* MKMagneticProgress.framework */,
+				0E0DAFD3A83593369CDA162CE676D445 /* PieCharts.framework */,
+				9D38B495EA59A8416C001C9F04DDB4EE /* Pods_CTFHU.framework */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/MKMagneticProgress";
+			name = Products;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				BFDF1ACF032FBEC1D1980D2BFE833F67 /* Pods */,
-				30F75B1EF1F4C0A14B000F8AA33163EC /* Products */,
+				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
+				A1821C44F9DB481359BBC8BC798D2273 /* Pods */,
+				7C0494AF1A58A0F36136B71DD4EF8B22 /* Products */,
 				4AB38959F20E7C5F65FAEFC0881572DC /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+		93FD095B5FC2A2BCC81B8E3CFC167E67 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+				99C06B1B209CA23EC16EBF65CF890313 /* CoreGraphics.framework */,
+				CE59B0D97841C2542CA3D20540685C26 /* Foundation.framework */,
+				A5224A726D9EABB2D5F18E4597390EF3 /* UIKit.framework */,
 			);
-			name = Frameworks;
+			name = iOS;
 			sourceTree = "<group>";
 		};
-		BFDF1ACF032FBEC1D1980D2BFE833F67 /* Pods */ = {
+		9B61E12CFD183046B06199FEACC5B6ED /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				31476AA8C8240D390177E4FDC2632A7C /* MKMagneticProgress */,
+				8147B185BE1B0AE021E56C301E51A7B8 /* Info.plist */,
+				EB35957FEA5D5A7883E398E0E95C62E8 /* MKMagneticProgress.modulemap */,
+				7D3C8B6FFFA593831C128012F05139BC /* MKMagneticProgress.xcconfig */,
+				45DCCF2958742199886BDCEE956ECCE6 /* MKMagneticProgress-dummy.m */,
+				7F442BAB0D225B4459D2C5C953E49B3F /* MKMagneticProgress-prefix.pch */,
+				61D771D37E3280803355E6D7359A360C /* MKMagneticProgress-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MKMagneticProgress";
+			sourceTree = "<group>";
+		};
+		A1821C44F9DB481359BBC8BC798D2273 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1056310A671A9A93E0200EBD8ED619BE /* MKMagneticProgress */,
+				EB923DF238B4EFD5368720499241E2EF /* PieCharts */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+		EB923DF238B4EFD5368720499241E2EF /* PieCharts */ = {
 			isa = PBXGroup;
 			children = (
-				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+				4FE8F63F7C6CECF38F64801114C51A17 /* AlphaPieLineTextLayerAnimator.swift */,
+				481F4BF3D15E187573A86EE7B2FFDF9F /* AlphaPieViewLayerAnimator.swift */,
+				0D8010D2BF5DA76223BF28EBD3D5915B /* CGPoint.swift */,
+				86613C1C6993E0CC02CBBBE6DDD3BAAE /* CGRect.swift */,
+				6987AB7E536EE526AC7D6DBAF9DD62E0 /* CGSize.swift */,
+				EDA48C1035F16EB2D2442F298DF4D33E /* FloatingPoint.swift */,
+				D77047C2A0B274F90C250905A8E1E01A /* Globals.swift */,
+				7686CBAB9D1043A47B24C66481B00767 /* Int.swift */,
+				55D3A76F1E75E19BF1BC2C943549115B /* PieChart.swift */,
+				BC736453391F94E8DD9F37E824530FC8 /* PieChartDelegate.swift */,
+				80737D87BBF0254E5A49A2705AFF6853 /* PieChartLabelSettings.swift */,
+				7BE69498849A6F0C13925C552ADB36D1 /* PieChartLayer.swift */,
+				F200151AAD1A35C87A3396256AAC2314 /* PieCustomViewsLayer.swift */,
+				38765168D44DB6166CC2F5B6E9E0080B /* PieLineTextLayer.swift */,
+				5B857DB1D019CA6EAA027500C40637D2 /* PieLineTextLayerAnimator.swift */,
+				1E5B9D8B9B34BF753889F578D815EF69 /* PiePlainTextLayer.swift */,
+				CC20107F5C603B0479993CA7B8A3B1F8 /* PieSlice.swift */,
+				D3EC3CCE2D69490A82468900A1BA7B17 /* PieSliceData.swift */,
+				26EDAA2A13FAB7415DEA19966BAAEAEC /* PieSliceDelegate.swift */,
+				8E93A4635DB5C606DB02D4A92C245AF1 /* PieSliceLayer.swift */,
+				871781FE58F78DB7CF70891CE8245CBA /* PieSliceModel.swift */,
+				517BEBAB1954BF3B9660930728ABE556 /* PieViewLayerAnimator.swift */,
+				39759E32922AD2CB674BC5D4F40E2744 /* Support Files */,
 			);
-			name = iOS;
+			name = PieCharts;
+			path = PieCharts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		8A07C3F5B5BF32BE485C67F075B0FB24 /* Headers */ = {
+		5BBBE0219F1FE76DC8124A383D757059 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BFFE5DD1612E296ECB0272C4D3828B9 /* Pods-CTFHU-umbrella.h in Headers */,
+				52FEC469DC1B6E386AAA842598CD19BA /* PieCharts-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F8EB4EC93677C9E9EF26D7612707303 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71580FC51C63278A41557A72C12A8069 /* Pods-CTFHU-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,25 +332,43 @@
 			);
 			name = MKMagneticProgress;
 			productName = MKMagneticProgress;
-			productReference = FCCF50EA81818C731F01860B17421EA4 /* MKMagneticProgress.framework */;
+			productReference = A0798A855293EFBDF0A304CAD9E2F010 /* MKMagneticProgress.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		A154B93A2A39480F1AD72A49D41C9FCE /* Pods-CTFHU */ = {
+		5E4B9D023702B55BE61C5C148DF100EA /* PieCharts */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0D1CE0E0EFF31754DFAC420D56433E90 /* Build configuration list for PBXNativeTarget "Pods-CTFHU" */;
+			buildConfigurationList = 1FF7ADD158EE979EB96C0FC969FCC821 /* Build configuration list for PBXNativeTarget "PieCharts" */;
 			buildPhases = (
-				16D1BE0EEAB7FD5D304BBE5CDDA0C81C /* Sources */,
-				5B06F6D6B748DD7DC691523283782756 /* Frameworks */,
-				8A07C3F5B5BF32BE485C67F075B0FB24 /* Headers */,
+				893409F1BB3E0853824B2E55FC9502C6 /* Sources */,
+				B3A9331E7094391BD25AE6ECDD88E7CA /* Frameworks */,
+				5BBBE0219F1FE76DC8124A383D757059 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B62DEB556E4A4CDC158F366C5DFC6CED /* PBXTargetDependency */,
+			);
+			name = PieCharts;
+			productName = PieCharts;
+			productReference = 0E0DAFD3A83593369CDA162CE676D445 /* PieCharts.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8AE92566A9BD1A5AF879A03655C1DD7A /* Pods-CTFHU */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 449DE3CFBC5F01FBEBB09931A50B737D /* Build configuration list for PBXNativeTarget "Pods-CTFHU" */;
+			buildPhases = (
+				F5D6A02F28475728199803D5C5FD11B4 /* Sources */,
+				94D419E2C236ED0B473742C2D02902B2 /* Frameworks */,
+				5F8EB4EC93677C9E9EF26D7612707303 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DCD5C8B5C32FB15E2AB215D89F979FDA /* PBXTargetDependency */,
+				5334F5B3AB9AF08A155682B8B2CFA88A /* PBXTargetDependency */,
 			);
 			name = "Pods-CTFHU";
 			productName = "Pods-CTFHU";
-			productReference = 19429ADCCA51032E70DBCED1D5F27061 /* Pods_CTFHU.framework */;
+			productReference = 9D38B495EA59A8416C001C9F04DDB4EE /* Pods_CTFHU.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -238,22 +388,45 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 30F75B1EF1F4C0A14B000F8AA33163EC /* Products */;
+			productRefGroup = 7C0494AF1A58A0F36136B71DD4EF8B22 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				1756F216E4712D8E854FA252C09C09F2 /* MKMagneticProgress */,
-				A154B93A2A39480F1AD72A49D41C9FCE /* Pods-CTFHU */,
+				5E4B9D023702B55BE61C5C148DF100EA /* PieCharts */,
+				8AE92566A9BD1A5AF879A03655C1DD7A /* Pods-CTFHU */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		16D1BE0EEAB7FD5D304BBE5CDDA0C81C /* Sources */ = {
+		893409F1BB3E0853824B2E55FC9502C6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7BFF052FFFB5D5F6E241C6C8A0D7158 /* Pods-CTFHU-dummy.m in Sources */,
+				8B3FBEC1B31193573F0D1C3BF7D8E754 /* AlphaPieLineTextLayerAnimator.swift in Sources */,
+				E87438828DF8DD13F06F0B969C55B045 /* AlphaPieViewLayerAnimator.swift in Sources */,
+				19D0891D8DF0929968FED7E011FDB992 /* CGPoint.swift in Sources */,
+				1FF0667D8F3FAFB413043E19780518A9 /* CGRect.swift in Sources */,
+				4D623ECDD6171CFBDABA6D3589EEBF45 /* CGSize.swift in Sources */,
+				0B34B29DCFF24310DB6096F431D05AB8 /* FloatingPoint.swift in Sources */,
+				0AA81CDBF93F9CDF97456CF73BAFF2B9 /* Globals.swift in Sources */,
+				092080F1DF547E2BA5961DE79832BAAA /* Int.swift in Sources */,
+				27CD5ACBCEE0915A06D6A80CABE89D22 /* PieChart.swift in Sources */,
+				CE4A28B70185589B97A52C2375F224E1 /* PieChartDelegate.swift in Sources */,
+				EC7E3714F37C66B42D016F831C0B4F69 /* PieChartLabelSettings.swift in Sources */,
+				CDD5A94AB041BC9ED367E5123254B352 /* PieChartLayer.swift in Sources */,
+				34CAB7F31908ECC2AEB99EA6826049B3 /* PieCharts-dummy.m in Sources */,
+				6CA761451B45C8297D78282043DABCE4 /* PieCustomViewsLayer.swift in Sources */,
+				FDDB8D65F603EDAFADBA538D28EA7B75 /* PieLineTextLayer.swift in Sources */,
+				A886C3EBF285F2B4A7D2A7EB15DC3BD5 /* PieLineTextLayerAnimator.swift in Sources */,
+				E1D62C5AE853D475FBEB562A105BDDA7 /* PiePlainTextLayer.swift in Sources */,
+				0523B7C8A63DA42128DD53158BE63E20 /* PieSlice.swift in Sources */,
+				E467687A4A8A981F5293BECDBCDADC74 /* PieSliceData.swift in Sources */,
+				4DF34483354278BD1EA63A3CC7A50CFA /* PieSliceDelegate.swift in Sources */,
+				53B45AB9FBE5CD4BCC4639C2DC907EEB /* PieSliceLayer.swift in Sources */,
+				847BAD9822C05029A78ED83F6F5D92A6 /* PieSliceModel.swift in Sources */,
+				A1EF267D6DEDBC911FDC5C8DC34211D4 /* PieViewLayerAnimator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,21 +439,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F5D6A02F28475728199803D5C5FD11B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47B802EA7118B37614CEC5251CF04D89 /* Pods-CTFHU-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		B62DEB556E4A4CDC158F366C5DFC6CED /* PBXTargetDependency */ = {
+		5334F5B3AB9AF08A155682B8B2CFA88A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PieCharts;
+			target = 5E4B9D023702B55BE61C5C148DF100EA /* PieCharts */;
+			targetProxy = 78D83B0F56957A9C49B8B4FED63D4A94 /* PBXContainerItemProxy */;
+		};
+		DCD5C8B5C32FB15E2AB215D89F979FDA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MKMagneticProgress;
 			target = 1756F216E4712D8E854FA252C09C09F2 /* MKMagneticProgress */;
-			targetProxy = 58FBD19D686F0972108003353A876E20 /* PBXContainerItemProxy */;
+			targetProxy = 9F607A0F2485BE304D84302B0BA8C8CA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		13F1AA351D518E020F3050F293404C3A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8A39DD9023EED2EF6B05A65F733F8658 /* MKMagneticProgress.xcconfig */;
+			baseConfigurationReference = 7D3C8B6FFFA593831C128012F05139BC /* MKMagneticProgress.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -310,7 +497,7 @@
 			};
 			name = Release;
 		};
-		3B9C938A0258808DD31268980B5A3109 /* Debug */ = {
+		398022A857EE8CBF54E0A5F125B90071 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D0775B8F0A56A1A4984F775CC2BED732 /* Pods-CTFHU.debug.xcconfig */;
 			buildSettings = {
@@ -344,9 +531,9 @@
 			};
 			name = Debug;
 		};
-		41CF39C87884E4EFF8315A40392B8121 /* Release */ = {
+		67BB7227D5D7703124336D95D31BEED9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E042665550EA338C82A825463042E7A3 /* Pods-CTFHU.release.xcconfig */;
+			baseConfigurationReference = B49B4D606C557DCE1C805D1C955C9BE6 /* PieCharts.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -357,30 +544,27 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-CTFHU/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/PieCharts/PieCharts-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PieCharts/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-CTFHU/Pods-CTFHU.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_CTFHU;
+				MODULEMAP_FILE = "Target Support Files/PieCharts/PieCharts.modulemap";
+				PRODUCT_NAME = PieCharts;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		89BCA74769970DC6DF3A2DF091B25A3F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8A39DD9023EED2EF6B05A65F733F8658 /* MKMagneticProgress.xcconfig */;
+			baseConfigurationReference = 7D3C8B6FFFA593831C128012F05139BC /* MKMagneticProgress.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -464,6 +648,72 @@
 			};
 			name = Release;
 		};
+		B58F699C365D7F2A563A85A20CA88EB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E042665550EA338C82A825463042E7A3 /* Pods-CTFHU.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CTFHU/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CTFHU/Pods-CTFHU.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_CTFHU;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DBB173CC5CAA8EF63AC767145843ACA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B49B4D606C557DCE1C805D1C955C9BE6 /* PieCharts.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PieCharts/PieCharts-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PieCharts/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PieCharts/PieCharts.modulemap";
+				PRODUCT_NAME = PieCharts;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		E4B68EE12B21C47CB798D9B1ECA6D7A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -527,11 +777,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0D1CE0E0EFF31754DFAC420D56433E90 /* Build configuration list for PBXNativeTarget "Pods-CTFHU" */ = {
+		1FF7ADD158EE979EB96C0FC969FCC821 /* Build configuration list for PBXNativeTarget "PieCharts" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3B9C938A0258808DD31268980B5A3109 /* Debug */,
-				41CF39C87884E4EFF8315A40392B8121 /* Release */,
+				67BB7227D5D7703124336D95D31BEED9 /* Debug */,
+				DBB173CC5CAA8EF63AC767145843ACA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -550,6 +800,15 @@
 			buildConfigurations = (
 				89BCA74769970DC6DF3A2DF091B25A3F /* Debug */,
 				13F1AA351D518E020F3050F293404C3A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		449DE3CFBC5F01FBEBB09931A50B737D /* Build configuration list for PBXNativeTarget "Pods-CTFHU" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				398022A857EE8CBF54E0A5F125B90071 /* Debug */,
+				B58F699C365D7F2A563A85A20CA88EB3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

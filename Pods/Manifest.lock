@@ -1,12 +1,15 @@
 PODS:
   - MKMagneticProgress (1.3)
+  - PieCharts (0.0.5)
 
 DEPENDENCIES:
   - MKMagneticProgress
+  - PieCharts
 
 SPEC CHECKSUMS:
   MKMagneticProgress: 9119f47c49bed51002adb25c5fb6097a1804894c
+  PieCharts: a0fb4784a3460088c8ba7dfb00b89784ddaa7e70
 
-PODFILE CHECKSUM: 01380e14bb44cb9a699b4a12aa08e44a24a2bb48
+PODFILE CHECKSUM: eb912925937cea81655890757cac2e238ae98dcd
 
 COCOAPODS: 1.3.1

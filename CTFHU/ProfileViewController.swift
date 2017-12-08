@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import PieCharts
+
 
 class ProfileViewController: UIViewController {
 
@@ -25,7 +27,7 @@ class ProfileViewController: UIViewController {
         playerName.text = TeamDataSet.currentPlayer.playerName
         playerTeamName.text = TeamDataSet.currentPlayer.teamName
         // Do any additional setup after loading the view.
-        
+
     }
 
     override func didReceiveMemoryWarning() {

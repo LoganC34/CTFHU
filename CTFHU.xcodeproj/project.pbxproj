@@ -277,10 +277,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CTFHU/Pods-CTFHU-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/MKMagneticProgress/MKMagneticProgress.framework",
+				"${BUILT_PRODUCTS_DIR}/PieCharts/PieCharts.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MKMagneticProgress.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PieCharts.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

@@ -10,15 +10,10 @@ import UIKit
 import CoreGraphics
 import MKMagneticProgress
 
-protocol DataSentDelegate {
-    func userCapturedFlag(flagImage: String)
-}
 
 class CaptureBarViewController: UIViewController {
     
     @IBOutlet weak var magProgress: MKMagneticProgress!
-    
-    var delegate: DataSentDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,22 +29,11 @@ class CaptureBarViewController: UIViewController {
         magProgress.lineCap = .round
         
         magProgress.title = "Flag A"
-        magProgress.percentLabelFormat = "%.2f%%"
+        magProgress.percentLabelFormat = "%.1f%%"
         
         // Do any additional setup after loading the view.
     }
-    
-    @IBAction func captureFlag(_ sender: UIButton) {
-        var i = 0.0
-        while i <= 1.0 {
-            magProgress.setProgress(progress: CGFloat(i), animated: true)
-            i = i + 0.1
-        }
-        print("\n")
-        print("hello")
-        print("\n")
-        delegate?.userCapturedFlag(flagImage: "bluePinA")
-    }
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
