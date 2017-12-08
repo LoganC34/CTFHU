@@ -11,7 +11,7 @@ import Foundation
 
 class DataSet {
     
-    static var sampleData = [["teamNameOne1", "teamNameOne2", "teamNameOne3", "teamNameOne4"], ["teamNameTwo1","teamNameTwo2","teamNameTwo3","teamNameTwo4"]]
+    static var sampleData = [["Red Team Player 1", "Red Team Player 2", "Red Team Player 3", "Red Team Player 4"], ["Blue Team Player 1","Blue Team Player 2","Blue Team Player 3","Blue Team Player 4"]]
     
 }
 

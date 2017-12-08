@@ -46,9 +46,6 @@ class CurrentGameViewController: UIViewController {
     @IBAction func unwindToCurrentGame(segue:UIStoryboardSegue) { }
     
     
-    let textCellIdentifierOne = "TeamOne"
-    let textCellIdentifierTwo = "TeamTwo"
-    let swiftBlogs = ["Ray Wenderlich", "NSHipster", "iOS Developer Tips", "Jameson Quave", "Natasha The Robot", "Coding Explorer", "That Thing In Swift", "Andrew Bancroft", "iAchieved.it", "Airspeed Velocity"]
     
 }
 

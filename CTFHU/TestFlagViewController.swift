@@ -68,18 +68,22 @@ class TestFlagViewController: UIViewController {
         flagA.flagName = "Flag A"
         //flagA.lat = 35.440208
         //flagA.long = -88.636866
-        flagA.lat = 35.440806
-        flagA.long = -88.636121
+        flagA.lat = 35.438814
+        flagA.long = -88.634407
         flagA.altitude = 140
         flagA.flagImageName = "pinA"
         flagA.flagControlledBy = "Red"
         flagA.flagRadius = 5.0
         flagA.flagValue = 100
         
+        //Orig A 35.440806
+        //Orig A -88.636121
         
+        //Orig B 35.438814
+        //Orig B -88.634407
         flagB.flagName = "Flag B"
-        flagB.lat = 35.438814
-        flagB.long = -88.634407
+        flagB.lat = 35.440920
+        flagB.long = -88.636081
         flagB.altitude = 140
         flagB.flagImageName = "pinB"
         flagB.flagControlledBy = "Red"

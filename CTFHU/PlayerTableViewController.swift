@@ -11,7 +11,7 @@ import UIKit
 class PlayerTableViewController: UITableViewController {
 
     var data: [Player]? = []
-    var sampleData = [["Team One","teamNameOne1", "teamNameOne2", "teamNameOne3", "teamNameOne4"], ["Team Two","teamNameTwo1","teamNameTwo2","teamNameTwo3","teamNameTwo4"]]
+    var sampleData = [["Red Team","Red Team Player 1", "Red Team Player 2", "Red Team Player 3", "Red Team Player 4"], ["Blue Team","Logan Cain (Me)","Blue Team Player 2","Blue Team Player 3","Blue Team Player 4"]]
     
     override func viewDidLoad() {
         super.viewDidLoad()

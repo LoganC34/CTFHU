@@ -17,6 +17,7 @@ public class Player {
     var losses = Double()
     var captures = Double()
     
+    
     convenience init (playerName: String, imageName: String, wins: Double, losses: Double, captures: Double) {
         self.init()
         self.playerName = playerName
