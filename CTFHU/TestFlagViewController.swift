@@ -12,10 +12,13 @@ import CoreLocation
 import MapKit
 import MKMagneticProgress
 
-class TestFlagViewController: UIViewController {
 
+
+class TestFlagViewController: UIViewController {
+    
+    var timer: Timer!
+    
     let sceneLocationView = SceneLocationView()
-    //var delegate: TestFlagDelegate?
 
     let mapView = MKMapView()
     var userAnnotation: MKPointAnnotation?
@@ -65,8 +68,8 @@ class TestFlagViewController: UIViewController {
         flagA.flagName = "Flag A"
         //flagA.lat = 35.440208
         //flagA.long = -88.636866
-        flagA.lat = 35.440728
-        flagA.long = -88.636301
+        flagA.lat = 35.440806
+        flagA.long = -88.636121
         flagA.altitude = 140
         flagA.flagImageName = "pinA"
         flagA.flagControlledBy = "Red"
@@ -239,7 +242,7 @@ class TestFlagViewController: UIViewController {
         else if flagImage == "pinB" && flag == "Flag B" {
             flagB.flagImageName = "bluePinB"
             addPinToScreen(latitude: flagB.lat!, longitude: flagB.long!, altitude: flagB.altitude!, ImageName: flagB.flagImageName!)
-            //delegate?.giveDataToControlBar(flagName: flag, flagValue: Double(100.0))
+            //delegate?.sendData(flagName: flag, flagValue: 100.0)
             print("\n")
             print("Im blue B")
             print("\n")
@@ -273,17 +276,66 @@ class TestFlagViewController: UIViewController {
         
     }
     
-    
+    func timerfunctionA() {
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(counterSecondsA), userInfo: nil, repeats: true)
+        
+    }
+    var counter = 0;
+    @objc func counterSecondsA() {
+        print("Capping...")
+        counter = counter + 1
+        if counter == 10 {
+            timer.invalidate()
+            userCapturedFlag(flagImage: flagA.flagImageName!, flag: flagA.flagName!)
+            showAlert(title: "Flag A", message: "You've captured flag A!")
+            counter = 0
+        }
+    }
 
     
+    func timerfunctionB() {
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(counterSecondsB), userInfo: nil, repeats: true)
+        
+    }
+
+    @objc func counterSecondsB() {
+        print("Capping...")
+        counter = counter + 1
+        if counter == 10 {
+            timer.invalidate()
+            userCapturedFlag(flagImage: flagB.flagImageName!, flag: flagB.flagName!)
+            showAlert(title: "Flag B", message: "You've captured flag B!")
+            NotificationCenter.default.post(name: .flagB, object: nil)
+            counter = 0
+        }
+    }
+
+    
+    
+    
+    func timerfunctionC() {
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(counterSecondsC), userInfo: nil, repeats: true)
+
+    }
+
+    @objc func counterSecondsC() {
+        print("Capping...")
+        counter = counter + 1
+        if counter == 10 {
+            timer.invalidate()
+            userCapturedFlag(flagImage: flagC.flagImageName!, flag: flagC.flagName!)
+            showAlert(title: "Flag C", message: "You've captured flag C!")
+            counter = 0
+        }
+    }
+    
+
     
     }
 
 extension TestFlagViewController: CLLocationManagerDelegate {
-    
+ 
 
-
-    
     
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -301,14 +353,12 @@ extension TestFlagViewController: CLLocationManagerDelegate {
             while distanceInMetersFromA <= 30 && flagA.flagValue != 0 {
                 if flagA.flagValue != 0 {
                     flagA.flagValue = flagA.flagValue! - 10
-                    print(flagA.flagValue!)
-                    //delegate?.giveDataToControlBar(flagName: flagA.flagName!, flagValue: Double(flagA.flagValue!))
+
 
                 }
                 if flagA.flagValue == 0 {
                     //make progress 100%
-                    userCapturedFlag(flagImage: flagA.flagImageName!, flag: flagA.flagName!)
-                    showAlert(title: "Flag A", message: "You've captured flag A!")
+                    timerfunctionA()
                     print("\n")
                     print("test A")
                     print("\n")
@@ -319,13 +369,9 @@ extension TestFlagViewController: CLLocationManagerDelegate {
             while distanceInMetersFromB <= 30 && flagB.flagValue != 0 {
                 if flagB.flagValue != 0 {
                     flagB.flagValue = flagB.flagValue! - 10
-                    print(flagB.flagValue!)
-                    //delegate?.giveDataToControlBar(flagName: flagB.flagName!, flagValue: Double(flagB.flagValue!))
                 }
                 if flagB.flagValue == 0 {
-                    //make progress 100%
-                    userCapturedFlag(flagImage: flagB.flagImageName!, flag: flagB.flagName!)
-                    showAlert(title: "Flag B", message: "You've captured flag B!")
+                    timerfunctionB()
                     print("\n")
                     print("test B")
                     print("\n")
@@ -336,13 +382,9 @@ extension TestFlagViewController: CLLocationManagerDelegate {
             while distanceInMetersFromC <= 30 && flagC.flagValue != 0 {
                 if flagC.flagValue != 0 {
                     flagC.flagValue = flagC.flagValue! - 10
-                    print(flagC.flagValue!)
-                    //delegate?.giveDataToControlBar(flagName: flagC.flagName!, flagValue: Double(flagC.flagValue!))
                 }
                 if flagC.flagValue == 0 {
-                    //make progress 100%
-                    userCapturedFlag(flagImage: flagC.flagImageName!, flag: flagC.flagName!)
-                    showAlert(title: "Flag C", message: "You've captured flag C!")
+                    timerfunctionC()
                     print("\n")
                     print("test C")
                     print("\n")
@@ -350,5 +392,7 @@ extension TestFlagViewController: CLLocationManagerDelegate {
             }
         }
     }
-    
+
 }
+
+

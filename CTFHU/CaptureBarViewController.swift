@@ -13,6 +13,7 @@ import MKMagneticProgress
 
 
 class CaptureBarViewController: UIViewController {
+
     
     @IBOutlet weak var magProgress: MKMagneticProgress!
     
@@ -33,6 +34,7 @@ class CaptureBarViewController: UIViewController {
         magProgress.percentLabelFormat = "%.1f%%"
         
         // Do any additional setup after loading the view.
+        NotificationCenter.default.addObserver(self, selector: #selector(progressBarForFlagB(notification:)), name: .flagB, object: nil)
     }
     
     
@@ -40,6 +42,12 @@ class CaptureBarViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @objc func progressBarForFlagB(notification: NSNotification) {
+        magProgress.setProgress(progress: 1.0, animated: false)
+        magProgress.title = "Flag B"
+    }
+
     
     
     
@@ -53,4 +61,8 @@ class CaptureBarViewController: UIViewController {
      }
      */
     
+}
+
+extension Notification.Name {
+    static let flagB = Notification.Name("flagB")
 }
