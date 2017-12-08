@@ -149,11 +149,25 @@ class TestFlagViewController: UIViewController {
         print(locationManager.location?.verticalAccuracy)
         print("\n")
 
-
+        NotificationCenter.default.addObserver(self, selector: #selector(flagBChangeImage(notification:)), name: .flagBCaptured, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(flagCChangeImage(notification:)), name: .flagCCaptured, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(flagAChangeImage(notification:)), name: .flagACaptured, object: nil)
+        
     }
     
+    @objc func flagBChangeImage(notification: NSNotification) {
+        userCapturedFlag(flagImage: flagB.flagImageName!, flag: flagB.flagName!)
+        showAlert(title: "Flag B", message: "You've captured flag B!")
+    }
     
-    
+    @objc func flagCChangeImage(notification: NSNotification) {
+        userCapturedFlag(flagImage: flagC.flagImageName!, flag: flagC.flagName!)
+        showAlert(title: "Flag C", message: "You've captured flag C!")
+    }
+    @objc func flagAChangeImage(notification: NSNotification) {
+        userCapturedFlag(flagImage: flagA.flagImageName!, flag: flagA.flagName!)
+        showAlert(title: "Flag A", message: "You've captured flag A!")
+    }
     
     func addPinToScreen(latitude: Double, longitude: Double, altitude: Double, ImageName: String) {
         let coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
@@ -357,8 +371,7 @@ extension TestFlagViewController: CLLocationManagerDelegate {
 
                 }
                 if flagA.flagValue == 0 {
-                    //make progress 100%
-                    timerfunctionA()
+                    NotificationCenter.default.post(name: .flagA, object: nil)
                     print("\n")
                     print("test A")
                     print("\n")
@@ -371,7 +384,7 @@ extension TestFlagViewController: CLLocationManagerDelegate {
                     flagB.flagValue = flagB.flagValue! - 10
                 }
                 if flagB.flagValue == 0 {
-                    timerfunctionB()
+                    NotificationCenter.default.post(name: .flagB, object: nil)
                     print("\n")
                     print("test B")
                     print("\n")
@@ -384,7 +397,7 @@ extension TestFlagViewController: CLLocationManagerDelegate {
                     flagC.flagValue = flagC.flagValue! - 10
                 }
                 if flagC.flagValue == 0 {
-                    timerfunctionC()
+                    NotificationCenter.default.post(name: .flagC, object: nil)
                     print("\n")
                     print("test C")
                     print("\n")
@@ -394,5 +407,9 @@ extension TestFlagViewController: CLLocationManagerDelegate {
     }
 
 }
-
+extension Notification.Name {
+    static let flagBCaptured = Notification.Name("flagBCaptured")
+    static let flagACaptured = Notification.Name("flagACaptured")
+    static let flagCCaptured = Notification.Name("flagCCaptured")
+}
 

@@ -13,7 +13,7 @@ import MKMagneticProgress
 
 
 class CaptureBarViewController: UIViewController {
-
+    var timer: Timer!
     
     @IBOutlet weak var magProgress: MKMagneticProgress!
     
@@ -35,6 +35,8 @@ class CaptureBarViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         NotificationCenter.default.addObserver(self, selector: #selector(progressBarForFlagB(notification:)), name: .flagB, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(progressBarForFlagB(notification:)), name: .flagA, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(progressBarForFlagB(notification:)), name: .flagC, object: nil)
     }
     
     
@@ -44,11 +46,74 @@ class CaptureBarViewController: UIViewController {
     }
     
     @objc func progressBarForFlagB(notification: NSNotification) {
-        magProgress.setProgress(progress: 1.0, animated: false)
+        timerfunctionB()    }
+
+    func timerfunctionB() {
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(counterSecondsB), userInfo: nil, repeats: true)
+        
+    }
+    var counter = 0
+    var progressPercentage = 0.1
+    @objc func counterSecondsB() {
+        print("Capping...")
+        magProgress.setProgress(progress: CGFloat(progressPercentage), animated: false)
+        progressPercentage = progressPercentage + 0.1
+        counter = counter + 1
         magProgress.title = "Flag B"
+        if counter == 10 {
+            timer.invalidate()
+            NotificationCenter.default.post(name: .flagBCaptured, object: nil)
+            
+            counter = 0
+            progressPercentage = 0
+        }
+    }
+    
+    @objc func progressBarForFlagA(notification: NSNotification) {
+        timerfunctionA()    }
+    
+    func timerfunctionA() {
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(counterSecondsA), userInfo: nil, repeats: true)
+        
     }
 
+    @objc func counterSecondsA() {
+        print("Capping...")
+        magProgress.setProgress(progress: CGFloat(progressPercentage), animated: false)
+        progressPercentage = progressPercentage + 0.1
+        counter = counter + 1
+        magProgress.title = "Flag A"
+        if counter == 10 {
+            timer.invalidate()
+            NotificationCenter.default.post(name: .flagACaptured, object: nil)
+            
+            counter = 0
+            progressPercentage = 0
+        }
+    }
     
+    @objc func progressBarForFlagC(notification: NSNotification) {
+        timerfunctionC()    }
+    
+    func timerfunctionC() {
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(counterSecondsC), userInfo: nil, repeats: true)
+        
+    }
+    
+    @objc func counterSecondsC() {
+        print("Capping...")
+        magProgress.setProgress(progress: CGFloat(progressPercentage), animated: false)
+        progressPercentage = progressPercentage + 0.1
+        counter = counter + 1
+        magProgress.title = "Flag C"
+        if counter == 10 {
+            timer.invalidate()
+            NotificationCenter.default.post(name: .flagCCaptured, object: nil)
+            
+            counter = 0
+            progressPercentage = 0
+        }
+    }
     
     
     /*
@@ -65,4 +130,6 @@ class CaptureBarViewController: UIViewController {
 
 extension Notification.Name {
     static let flagB = Notification.Name("flagB")
+    static let flagA = Notification.Name("flagA")
+    static let flagC = Notification.Name("flagC")
 }
