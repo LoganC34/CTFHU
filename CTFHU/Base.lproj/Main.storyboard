@@ -426,6 +426,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HJZ-3k-Ezh" customClass="PieChart" customModule="PieCharts">
+                                <rect key="frame" x="16" y="230" width="343" height="292"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.92157250639999999" green="0.91768878700000001" blue="0.91749095920000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="ut1-6K-8mI"/>
@@ -433,6 +437,7 @@
                     <tabBarItem key="tabBarItem" title="Profile" image="Profile" selectedImage="Profile" id="S1Z-xw-Oif"/>
                     <navigationItem key="navigationItem" title="Profile" id="qre-kD-kE7"/>
                     <connections>
+                        <outlet property="chartView" destination="HJZ-3k-Ezh" id="yL8-nV-odk"/>
                         <outlet property="playerAvatar" destination="6As-78-xZ0" id="UJ1-kP-1YV"/>
                         <outlet property="playerName" destination="ROE-Cm-gWA" id="kQC-5M-MZO"/>
                         <outlet property="playerTeamName" destination="jaR-5B-ta2" id="buh-hW-Nkn"/>
@@ -501,14 +506,6 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="title" value="Flag A"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="86S-cA-55e">
-                                <rect key="frame" x="259" y="20" width="100" height="90"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="captureFlag:" destination="8Lw-VB-FgI" eventType="touchUpInside" id="sMs-Ro-Xc6"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="AQc-EC-aaL" firstAttribute="bottom" secondItem="DuG-xw-9ug" secondAttribute="bottom" constant="2" id="00s-Fc-UEN"/>

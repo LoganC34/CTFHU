@@ -275,9 +275,19 @@ class TestFlagViewController: UIViewController {
         
     }
     
+    
+
+    
+    
     }
 
 extension TestFlagViewController: CLLocationManagerDelegate {
+    
+
+    
+    
+    
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         let coordinateForFlagA = CLLocation(latitude: flagA.lat!, longitude: flagA.long!)
@@ -323,7 +333,6 @@ extension TestFlagViewController: CLLocationManagerDelegate {
             while distanceInMetersFromC <= 30 && flagC.flagValue != 0 {
                 if flagC.flagValue != 0 {
                     flagC.flagValue = flagC.flagValue! - 10
-                    //increment progress
                     print(flagC.flagValue!)
                 }
                 if flagC.flagValue == 0 {
