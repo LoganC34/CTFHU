@@ -289,7 +289,7 @@ class TestFlagViewController: UIViewController {
         }
         
     }
-    
+    /*
     func timerfunctionA() {
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(counterSecondsA), userInfo: nil, repeats: true)
         
@@ -344,7 +344,7 @@ class TestFlagViewController: UIViewController {
     }
     
 
-    
+    */
     }
 
 extension TestFlagViewController: CLLocationManagerDelegate {
