@@ -129,7 +129,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zJT-xA-Rkt">
                                 <rect key="frame" x="0.0" y="537" width="375" height="130"/>
                                 <connections>
-                                    <segue destination="8Lw-VB-FgI" kind="embed" identifier="captureBar" id="4iy-48-hPg"/>
+                                    <segue destination="8Lw-VB-FgI" kind="embed" identifier="flagCaptureBar" id="4iy-48-hPg"/>
                                 </connections>
                             </containerView>
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rcr-HT-HBZ">
@@ -516,7 +516,7 @@
                         <viewLayoutGuide key="safeArea" id="AQc-EC-aaL"/>
                     </view>
                     <connections>
-                        <outlet property="magProgress" destination="DuG-xw-9ug" id="EVv-SQ-M2C"/>
+                        <outlet property="magProgress" destination="DuG-xw-9ug" id="Hen-PQ-YqV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="npn-K0-Fdc" userLabel="First Responder" sceneMemberID="firstResponder"/>

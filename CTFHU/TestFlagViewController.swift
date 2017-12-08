@@ -12,16 +12,8 @@ import CoreLocation
 import MapKit
 import MKMagneticProgress
 
-//protocol TestFlagDelegate {
-  //  func capturingFlag(captureValue: Int)
-//}
-
-
-
 class TestFlagViewController: UIViewController {
 
-    
-    
     let sceneLocationView = SceneLocationView()
     //var delegate: TestFlagDelegate?
 
@@ -73,8 +65,8 @@ class TestFlagViewController: UIViewController {
         flagA.flagName = "Flag A"
         //flagA.lat = 35.440208
         //flagA.long = -88.636866
-        flagA.lat = 35.440742
-        flagA.long = -88.636300
+        flagA.lat = 35.440728
+        flagA.long = -88.636301
         flagA.altitude = 140
         flagA.flagImageName = "pinA"
         flagA.flagControlledBy = "Red"
@@ -230,6 +222,7 @@ class TestFlagViewController: UIViewController {
         if flagImage == "pinA" && flag == "Flag A" {
             flagA.flagImageName = "bluePinA"
             addPinToScreen(latitude: flagA.lat!, longitude: flagA.long!, altitude: flagA.altitude!, ImageName: flagA.flagImageName!)
+            //delegate?.giveDataToControlBar(flagName: flag, flagValue: Double(100.0))
             print("\n")
             print("Im blue A")
             print("\n")
@@ -238,6 +231,7 @@ class TestFlagViewController: UIViewController {
         else if flagImage == "bluePinA" && flag == "Flag A" {
             flagA.flagImageName = "pinA"
             addPinToScreen(latitude: flagA.lat!, longitude: flagA.long!, altitude: flagA.altitude!, ImageName: flagA.flagImageName!)
+            //delegate?.giveDataToControlBar(flagName: flag, flagValue: Double(100.0))
             print("\n")
             print("Im red A")
             print("\n")
@@ -245,6 +239,7 @@ class TestFlagViewController: UIViewController {
         else if flagImage == "pinB" && flag == "Flag B" {
             flagB.flagImageName = "bluePinB"
             addPinToScreen(latitude: flagB.lat!, longitude: flagB.long!, altitude: flagB.altitude!, ImageName: flagB.flagImageName!)
+            //delegate?.giveDataToControlBar(flagName: flag, flagValue: Double(100.0))
             print("\n")
             print("Im blue B")
             print("\n")
@@ -253,6 +248,7 @@ class TestFlagViewController: UIViewController {
         else if flagImage == "bluePinB" && flag == "Flag B" {
             flagB.flagImageName = "pinB"
             addPinToScreen(latitude: flagB.lat!, longitude: flagB.long!, altitude: flagB.altitude!, ImageName: flagB.flagImageName!)
+            //delegate?.giveDataToControlBar(flagName: flag, flagValue: Double(100.0))
             print("\n")
             print("Im red B")
             print("\n")
@@ -260,6 +256,7 @@ class TestFlagViewController: UIViewController {
         else if flagImage == "pinC" && flag == "Flag C" {
             flagC.flagImageName = "bluePinC"
             addPinToScreen(latitude: flagC.lat!, longitude: flagC.long!, altitude: flagC.altitude!, ImageName: flagC.flagImageName!)
+            //delegate?.giveDataToControlBar(flagName: flag, flagValue: Double(100.0))
             print("\n")
             print("Im blue C")
             print("\n")
@@ -268,6 +265,7 @@ class TestFlagViewController: UIViewController {
         else if flagImage == "bluePinC" && flag == "Flag C" {
             flagC.flagImageName = "pinC"
             addPinToScreen(latitude: flagC.lat!, longitude: flagC.long!, altitude: flagC.altitude!, ImageName: flagC.flagImageName!)
+            //delegate?.giveDataToControlBar(flagName: flag, flagValue: Double(100.0))
             print("\n")
             print("Im red C")
             print("\n")
@@ -284,7 +282,7 @@ class TestFlagViewController: UIViewController {
 extension TestFlagViewController: CLLocationManagerDelegate {
     
 
-    
+
     
     
     
@@ -298,49 +296,55 @@ extension TestFlagViewController: CLLocationManagerDelegate {
         let distanceInMetersFromB = coordinateForFlagB.distance(from: locations.last!)
         let distanceInMetersFromC = coordinateForFlagC.distance(from: locations.last!)
         
-        if distanceInMetersFromA <= 30  {
+        
+        if distanceInMetersFromA <= 30 && flagA.flagImageName == "pinA" {
             while distanceInMetersFromA <= 30 && flagA.flagValue != 0 {
                 if flagA.flagValue != 0 {
                     flagA.flagValue = flagA.flagValue! - 10
-                    //increment progress
-                    //print(flagB.flagValue!)
+                    print(flagA.flagValue!)
+                    //delegate?.giveDataToControlBar(flagName: flagA.flagName!, flagValue: Double(flagA.flagValue!))
+
                 }
-                else if flagA.flagValue == 0 {
+                if flagA.flagValue == 0 {
                     //make progress 100%
                     userCapturedFlag(flagImage: flagA.flagImageName!, flag: flagA.flagName!)
                     showAlert(title: "Flag A", message: "You've captured flag A!")
+                    print("\n")
+                    print("test A")
+                    print("\n")
                 }
             }
         }
-        else if distanceInMetersFromB <= 30 {
+        else if distanceInMetersFromB <= 30 && flagB.flagImageName == "pinB" {
             while distanceInMetersFromB <= 30 && flagB.flagValue != 0 {
                 if flagB.flagValue != 0 {
                     flagB.flagValue = flagB.flagValue! - 10
-                    //increment progress
                     print(flagB.flagValue!)
+                    //delegate?.giveDataToControlBar(flagName: flagB.flagName!, flagValue: Double(flagB.flagValue!))
                 }
-                else if flagB.flagValue == 0 {
+                if flagB.flagValue == 0 {
                     //make progress 100%
                     userCapturedFlag(flagImage: flagB.flagImageName!, flag: flagB.flagName!)
                     showAlert(title: "Flag B", message: "You've captured flag B!")
                     print("\n")
-                    print("test")
+                    print("test B")
                     print("\n")
                 }
             }
         }
-        else if distanceInMetersFromC <= 30 {
+        else if distanceInMetersFromC <= 30 && flagC.flagImageName == "pinC" {
             while distanceInMetersFromC <= 30 && flagC.flagValue != 0 {
                 if flagC.flagValue != 0 {
                     flagC.flagValue = flagC.flagValue! - 10
                     print(flagC.flagValue!)
+                    //delegate?.giveDataToControlBar(flagName: flagC.flagName!, flagValue: Double(flagC.flagValue!))
                 }
                 if flagC.flagValue == 0 {
                     //make progress 100%
                     userCapturedFlag(flagImage: flagC.flagImageName!, flag: flagC.flagName!)
                     showAlert(title: "Flag C", message: "You've captured flag C!")
                     print("\n")
-                    print("test")
+                    print("test C")
                     print("\n")
                 }
             }

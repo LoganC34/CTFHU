@@ -6,6 +6,7 @@
 //  Copyright © 2017 Logan Cain. All rights reserved.
 //
 
+
 import UIKit
 import CoreGraphics
 import MKMagneticProgress
@@ -33,7 +34,7 @@ class CaptureBarViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
-
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -53,4 +54,3 @@ class CaptureBarViewController: UIViewController {
      */
     
 }
-
