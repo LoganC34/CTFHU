@@ -212,7 +212,7 @@ class TestFlagViewController: UIViewController {
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
     }
-    
+
     func userCapturedFlag(flagImage: String, flag: String) {
         print("\n")
         print("im before the if statement")
