@@ -61,13 +61,9 @@ class TestFlagViewController: UIViewController {
         
         sceneLocationView.run()
         view.addSubview(sceneLocationView)
-        // Do any additional setup after loading the view.
-        
 
-        
+ 
         flagA.flagName = "Flag A"
-        //flagA.lat = 35.440208
-        //flagA.long = -88.636866
         flagA.lat = 35.438814
         flagA.long = -88.634407
         flagA.altitude = 140
@@ -75,12 +71,7 @@ class TestFlagViewController: UIViewController {
         flagA.flagControlledBy = "Red"
         flagA.flagRadius = 5.0
         flagA.flagValue = 100
-        
-        //Orig A 35.440806
-        //Orig A -88.636121
-        
-        //Orig B 35.438814
-        //Orig B -88.634407
+
         flagB.flagName = "Flag B"
         flagB.lat = 35.440920
         flagB.long = -88.636081
@@ -99,35 +90,7 @@ class TestFlagViewController: UIViewController {
         flagC.flagControlledBy = "Red"
         flagC.flagRadius = 5.0
         flagC.flagValue = 100
-        
-        
-        /*
-        let coordinate = CLLocationCoordinate2D(latitude: flagA.lat!, longitude: flagA.long!)
-        let location = CLLocation(coordinate: coordinate, altitude: flagA.altitude!)
-        let image = UIImage(named: flagA.flagImageName!)!
-        
-        let annotationNode = LocationAnnotationNode(location: location, image: image)
-        annotationNode.scaleRelativeToDistance = true
-        sceneLocationView.addLocationNodeWithConfirmedLocation(locationNode: annotationNode)
-        view.addSubview(sceneLocationView)
-        
-        let coordinateB = CLLocationCoordinate2D(latitude: flagB.lat!, longitude: flagB.long!)
-        let locationB = CLLocation(coordinate: coordinateB, altitude: flagB.altitude!)
-        let imageB = UIImage(named: flagB.flagImageName!)!
-        
-        let annotationNodeB = LocationAnnotationNode(location: locationB, image: imageB)
-        sceneLocationView.addLocationNodeWithConfirmedLocation(locationNode: annotationNodeB)
-        annotationNodeB.scaleRelativeToDistance = true
-        view.addSubview(sceneLocationView)
-        
-        let coordinateC = CLLocationCoordinate2D(latitude: flagC.lat!, longitude: flagC.long!)
-        let locationC = CLLocation(coordinate: coordinateC, altitude: flagC.altitude!)
-        let imageC = UIImage(named: flagC.flagImageName!)!
-        
-        let annotationNodeC = LocationAnnotationNode(location: locationC, image: imageC)
-        sceneLocationView.addLocationNodeWithConfirmedLocation(locationNode: annotationNodeC)
-        annotationNodeC.scaleRelativeToDistance = true
-        view.addSubview(sceneLocationView)*/
+
         
         addPinToScreen(latitude: flagA.lat!, longitude: flagA.long!, altitude: flagA.altitude!, ImageName: flagA.flagImageName!)
         addPinToScreen(latitude: flagB.lat!, longitude: flagB.long!, altitude: flagB.altitude!, ImageName: flagB.flagImageName!)
@@ -203,7 +166,6 @@ class TestFlagViewController: UIViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -243,7 +205,6 @@ class TestFlagViewController: UIViewController {
         if flagImage == "pinA" && flag == "Flag A" {
             flagA.flagImageName = "bluePinA"
             addPinToScreen(latitude: flagA.lat!, longitude: flagA.long!, altitude: flagA.altitude!, ImageName: flagA.flagImageName!)
-            //delegate?.giveDataToControlBar(flagName: flag, flagValue: Double(100.0))
             print("\n")
             print("Im blue A")
             print("\n")
@@ -252,7 +213,6 @@ class TestFlagViewController: UIViewController {
         else if flagImage == "bluePinA" && flag == "Flag A" {
             flagA.flagImageName = "pinA"
             addPinToScreen(latitude: flagA.lat!, longitude: flagA.long!, altitude: flagA.altitude!, ImageName: flagA.flagImageName!)
-            //delegate?.giveDataToControlBar(flagName: flag, flagValue: Double(100.0))
             print("\n")
             print("Im red A")
             print("\n")
@@ -260,7 +220,6 @@ class TestFlagViewController: UIViewController {
         else if flagImage == "pinB" && flag == "Flag B" {
             flagB.flagImageName = "bluePinB"
             addPinToScreen(latitude: flagB.lat!, longitude: flagB.long!, altitude: flagB.altitude!, ImageName: flagB.flagImageName!)
-            //delegate?.sendData(flagName: flag, flagValue: 100.0)
             print("\n")
             print("Im blue B")
             print("\n")
@@ -269,7 +228,6 @@ class TestFlagViewController: UIViewController {
         else if flagImage == "bluePinB" && flag == "Flag B" {
             flagB.flagImageName = "pinB"
             addPinToScreen(latitude: flagB.lat!, longitude: flagB.long!, altitude: flagB.altitude!, ImageName: flagB.flagImageName!)
-            //delegate?.giveDataToControlBar(flagName: flag, flagValue: Double(100.0))
             print("\n")
             print("Im red B")
             print("\n")
@@ -277,7 +235,6 @@ class TestFlagViewController: UIViewController {
         else if flagImage == "pinC" && flag == "Flag C" {
             flagC.flagImageName = "bluePinC"
             addPinToScreen(latitude: flagC.lat!, longitude: flagC.long!, altitude: flagC.altitude!, ImageName: flagC.flagImageName!)
-            //delegate?.giveDataToControlBar(flagName: flag, flagValue: Double(100.0))
             print("\n")
             print("Im blue C")
             print("\n")
@@ -286,76 +243,15 @@ class TestFlagViewController: UIViewController {
         else if flagImage == "bluePinC" && flag == "Flag C" {
             flagC.flagImageName = "pinC"
             addPinToScreen(latitude: flagC.lat!, longitude: flagC.long!, altitude: flagC.altitude!, ImageName: flagC.flagImageName!)
-            //delegate?.giveDataToControlBar(flagName: flag, flagValue: Double(100.0))
             print("\n")
             print("Im red C")
             print("\n")
         }
         
     }
-    /*
-    func timerfunctionA() {
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(counterSecondsA), userInfo: nil, repeats: true)
-        
-    }
-    var counter = 0;
-    @objc func counterSecondsA() {
-        print("Capping...")
-        counter = counter + 1
-        if counter == 10 {
-            timer.invalidate()
-            userCapturedFlag(flagImage: flagA.flagImageName!, flag: flagA.flagName!)
-            showAlert(title: "Flag A", message: "You've captured flag A!")
-            counter = 0
-        }
-    }
-
-    
-    func timerfunctionB() {
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(counterSecondsB), userInfo: nil, repeats: true)
-        
-    }
-
-    @objc func counterSecondsB() {
-        print("Capping...")
-        counter = counter + 1
-        if counter == 10 {
-            timer.invalidate()
-            userCapturedFlag(flagImage: flagB.flagImageName!, flag: flagB.flagName!)
-            showAlert(title: "Flag B", message: "You've captured flag B!")
-            NotificationCenter.default.post(name: .flagB, object: nil)
-            counter = 0
-        }
-    }
-
-    
-    
-    
-    func timerfunctionC() {
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(counterSecondsC), userInfo: nil, repeats: true)
-
-    }
-
-    @objc func counterSecondsC() {
-        print("Capping...")
-        counter = counter + 1
-        if counter == 10 {
-            timer.invalidate()
-            userCapturedFlag(flagImage: flagC.flagImageName!, flag: flagC.flagName!)
-            showAlert(title: "Flag C", message: "You've captured flag C!")
-            counter = 0
-        }
-    }
-    
-
-    */
     }
 
 extension TestFlagViewController: CLLocationManagerDelegate {
- 
-
-    
-    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         let coordinateForFlagA = CLLocation(latitude: flagA.lat!, longitude: flagA.long!)
@@ -371,8 +267,6 @@ extension TestFlagViewController: CLLocationManagerDelegate {
             while distanceInMetersFromA <= 30 && flagA.flagValue != 0 {
                 if flagA.flagValue != 0 {
                     flagA.flagValue = flagA.flagValue! - 10
-
-
                 }
                 if flagA.flagValue == 0 {
                     NotificationCenter.default.post(name: .flagA, object: nil)

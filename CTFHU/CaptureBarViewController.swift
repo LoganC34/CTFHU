@@ -35,8 +35,8 @@ class CaptureBarViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         NotificationCenter.default.addObserver(self, selector: #selector(progressBarForFlagB(notification:)), name: .flagB, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(progressBarForFlagB(notification:)), name: .flagA, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(progressBarForFlagB(notification:)), name: .flagC, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(progressBarForFlagA(notification:)), name: .flagA, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(progressBarForFlagC(notification:)), name: .flagC, object: nil)
     }
     
     

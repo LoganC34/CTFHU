@@ -25,10 +25,10 @@ class TeamDataSet {
     static var redTeam = Team(players: [playerRed1, playerRed2], teamName: "Red", wins: "43")
     
     
-    
+    static var blueTeamPlayerNames = ["Player 1", "Player 2","Player 3","Player 4"]
     
     static var teamSampleData = [
-        Team(players: [playerRed1], teamName: "Red Team", wins: "5"), Team(players: [playerBlue1], teamName: "Blue Team", wins: "6")
+        Team(players: [playerRed1, playerRed2, playerRed3, playerRed4], teamName: "Red Team", wins: "5"), Team(players: [playerBlue1, playerBlue2, playerBlue3, playerBlue4], teamName: "Blue Team", wins: "6")
         /*Team(players: ["Player 1","Player 2","Player 3","Player 4"], teamName: "Green Team", wins: "3"),
          Team(players: ["Player 1","Player 2","Player 3","Player 4"], teamName: "Blue Team", wins: "2"),
          Team(players: ["Player 1","Player 2","Player 3","Player 4"], teamName: "Blue Team", wins: "2"),

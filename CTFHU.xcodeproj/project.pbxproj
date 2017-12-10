@@ -38,6 +38,9 @@
 		027DA7B51FBD6984009EBB22 /* PlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DA7B41FBD6984009EBB22 /* PlayerTableViewCell.swift */; };
 		029541E51FBCE5D000DD3659 /* Dataset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029541E41FBCE5D000DD3659 /* Dataset.swift */; };
 		029F17AA1FD892C0003521EF /* FlagDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F17A91FD892C0003521EF /* FlagDataSet.swift */; };
+		02B28BFC1FDCD63C000BE43E /* TeamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B28BFB1FDCD63C000BE43E /* TeamTableViewController.swift */; };
+		02B28BFE1FDCD6E0000BE43E /* SegueTeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B28BFD1FDCD6E0000BE43E /* SegueTeamTableViewCell.swift */; };
+		02B28C001FDCE21B000BE43E /* TeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B28BFF1FDCE21B000BE43E /* TeamTableViewCell.swift */; };
 		02BDA07F1FCF557A00249159 /* Flag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BDA07E1FCF557A00249159 /* Flag.swift */; };
 		02BDA0811FCF5C5300249159 /* TeamDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BDA0801FCF5C5300249159 /* TeamDataSet.swift */; };
 		02BDA0831FCF6A9E00249159 /* FlagLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BDA0821FCF6A9E00249159 /* FlagLocations.swift */; };
@@ -82,6 +85,9 @@
 		027DA7B41FBD6984009EBB22 /* PlayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTableViewCell.swift; sourceTree = "<group>"; };
 		029541E41FBCE5D000DD3659 /* Dataset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dataset.swift; sourceTree = "<group>"; };
 		029F17A91FD892C0003521EF /* FlagDataSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagDataSet.swift; sourceTree = "<group>"; };
+		02B28BFB1FDCD63C000BE43E /* TeamTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableViewController.swift; sourceTree = "<group>"; };
+		02B28BFD1FDCD6E0000BE43E /* SegueTeamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueTeamTableViewCell.swift; sourceTree = "<group>"; };
+		02B28BFF1FDCE21B000BE43E /* TeamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableViewCell.swift; sourceTree = "<group>"; };
 		02BDA07E1FCF557A00249159 /* Flag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flag.swift; sourceTree = "<group>"; };
 		02BDA0801FCF5C5300249159 /* TeamDataSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDataSet.swift; sourceTree = "<group>"; };
 		02BDA0821FCF6A9E00249159 /* FlagLocations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagLocations.swift; sourceTree = "<group>"; };
@@ -153,7 +159,10 @@
 				0250013C1FAD90C30036D650 /* TestFlagViewController.swift */,
 				022A2E431FBEDC330009062B /* TeamPlayerNameTableViewCell.swift */,
 				025D01451FBED23C000875BB /* TeamSegueViewController.swift */,
+				02B28BFB1FDCD63C000BE43E /* TeamTableViewController.swift */,
 				020524691FAD853000200249 /* TeamViewController.swift */,
+				02B28BFD1FDCD6E0000BE43E /* SegueTeamTableViewCell.swift */,
+				02B28BFF1FDCE21B000BE43E /* TeamTableViewCell.swift */,
 			);
 			path = CTFHU;
 			sourceTree = "<group>";
@@ -345,6 +354,7 @@
 				027594B71FADA104007B6F34 /* SCNVector3+Extensions.swift in Sources */,
 				027DA7B31FBD6935009EBB22 /* PlayerTableViewController.swift in Sources */,
 				02E69EC51FAEF9C9000F9A3D /* ProfileViewController.swift in Sources */,
+				02B28C001FDCE21B000BE43E /* TeamTableViewCell.swift in Sources */,
 				02E69EBF1FAEE29C000F9A3D /* LeaderboardViewController.swift in Sources */,
 				02E69EC31FAEF685000F9A3D /* EmbededViewController.swift in Sources */,
 				022A2E421FBEDC170009062B /* SegueTeamPlayersTableViewController.swift in Sources */,
@@ -355,10 +365,12 @@
 				0205246A1FAD853000200249 /* TeamViewController.swift in Sources */,
 				022A2E441FBEDC330009062B /* TeamPlayerNameTableViewCell.swift in Sources */,
 				025D01421FBE99FD000875BB /* LeaderboardTableViewController.swift in Sources */,
+				02B28BFE1FDCD6E0000BE43E /* SegueTeamTableViewCell.swift in Sources */,
 				020524661FAD853000200249 /* AppDelegate.swift in Sources */,
 				027594BD1FADA104007B6F34 /* SceneLocationEstimate.swift in Sources */,
 				029541E51FBCE5D000DD3659 /* Dataset.swift in Sources */,
 				027594BE1FADA104007B6F34 /* SCNNode+Extensions.swift in Sources */,
+				02B28BFC1FDCD63C000BE43E /* TeamTableViewController.swift in Sources */,
 				020524681FAD853000200249 /* CurrentGameViewController.swift in Sources */,
 				027594B91FADA104007B6F34 /* SceneLocationEstimate+Extensions.swift in Sources */,
 				02BDA07F1FCF557A00249159 /* Flag.swift in Sources */,
